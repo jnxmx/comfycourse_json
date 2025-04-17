@@ -1,0 +1,93 @@
+{
+  "last_node_id": 2,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "Hugging Face Download Folder",
+      "pos": [
+        557.967041015625,
+        391.196044921875
+      ],
+      "size": [
+        352.79998779296875,
+        154
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "token",
+          "type": "STRING",
+          "shape": 7,
+          "widget": {
+            "name": "token"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "folder name",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "jnxmx/ComfyUI_HuggingFace_Downloader",
+        "ver": "25c9d941d34c61948cc9ad9111eb8f4d6365992f",
+        "Node name for S&R": "Hugging Face Download Folder"
+      },
+      "widgets_values": [
+        "loras",
+        "",
+        "",
+        "",
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2,
+      "type": "Note",
+      "pos": [
+        944.2300415039062,
+        393.1692199707031
+      ],
+      "size": [
+        333.065185546875,
+        145.14898681640625
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "put into link your lora repo link from huggingface\nfor example https://huggingface.co/[your name]/[folder name]/"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.4641000000000022,
+      "offset": [
+        -27.092578704132904,
+        -15.739444434640959
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

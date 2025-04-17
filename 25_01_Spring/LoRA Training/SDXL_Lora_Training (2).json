@@ -1,0 +1,3911 @@
+{
+  "id": "bd2d1d89-b149-49ba-b451-a2df210f605a",
+  "revision": 0,
+  "last_node_id": 247,
+  "last_link_id": 434,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1247.2392578125,
+        -145.1564178466797
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 381
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 321
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            218
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 196,
+      "type": "FluxTrainSave",
+      "pos": [
+        1259.2711181640625,
+        1733.1075439453125
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 318
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            409
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 133,
+      "type": "FluxTrainEnd",
+      "pos": [
+        4085.00390625,
+        1475.8348388671875
+      ],
+      "size": [
+        317.4000244140625,
+        98
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 431
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lora_name",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        },
+        {
+          "name": "metadata",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 2,
+          "links": [
+            230
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainEnd"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 89,
+      "type": "UploadToHuggingFace",
+      "pos": [
+        4090.027587890625,
+        1662.1258544921875
+      ],
+      "size": [
+        315,
+        178
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 60,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": null
+        },
+        {
+          "name": "source_path",
+          "type": "STRING",
+          "widget": {
+            "name": "source_path"
+          },
+          "link": 230
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "links": null
+        },
+        {
+          "name": "status",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": [
+            246
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "UploadToHuggingFace"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 14,
+      "type": "FluxTrainSave",
+      "pos": [
+        1249.861328125,
+        -22.636383056640625
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            393
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 201,
+      "type": "SaveImage",
+      "pos": [
+        1720.3753662109375,
+        -147.1140899658203
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 395
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 203,
+      "type": "SaveImage",
+      "pos": [
+        1719.9415283203125,
+        750.80517578125
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 403
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 204,
+      "type": "SaveImage",
+      "pos": [
+        1714.7210693359375,
+        1201.2550048828125
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 407
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 205,
+      "type": "SaveImage",
+      "pos": [
+        1719.9571533203125,
+        1621.4154052734375
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 411
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 197,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1257.67138671875,
+        1614.5380859375
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 408
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 325
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            318
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 172,
+      "type": "FluxTrainSave",
+      "pos": [
+        1245.2828369140625,
+        1321.149169921875
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 289
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            405
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 171,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1245.2828369140625,
+        1194.018310546875
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 404
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 324
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            289
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 167,
+      "type": "FluxTrainSave",
+      "pos": [
+        1247.5869140625,
+        884.4960327148438
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 284
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            402
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 168,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1252.0654296875,
+        752.1922607421875
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 399
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 323
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            284
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 158,
+      "type": "FluxTrainSave",
+      "pos": [
+        1251.659912109375,
+        445.106201171875
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 278
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            397
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 157,
+      "type": "FluxTrainLoop",
+      "pos": [
+        1248.1630859375,
+        313.3224182128906
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 394
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 322
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            278
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 207,
+      "type": "SaveImage",
+      "pos": [
+        3187.239990234375,
+        314.84368896484375
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 419
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 208,
+      "type": "SaveImage",
+      "pos": [
+        3187.239990234375,
+        764.8438110351562
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 424
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 209,
+      "type": "SaveImage",
+      "pos": [
+        3187.239990234375,
+        1214.8431396484375
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 428
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 210,
+      "type": "SaveImage",
+      "pos": [
+        3187.239990234375,
+        1634.8431396484375
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 432
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 188,
+      "type": "FluxTrainSave",
+      "pos": [
+        2662.736083984375,
+        1757.6939697265625
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 305
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            429
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 191,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2658.779296875,
+        1631.866943359375
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 427
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 331
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            305
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 185,
+      "type": "FluxTrainSave",
+      "pos": [
+        2668.779296875,
+        1324.067626953125
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 302
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            425
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 186,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2669.988037109375,
+        1197.032470703125
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 423
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 330
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            302
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 183,
+      "type": "FluxTrainSave",
+      "pos": [
+        2681.743896484375,
+        884.9462280273438
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 300
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            421
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 194,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2674.491943359375,
+        765.4935913085938
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 420
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 329
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            300
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 177,
+      "type": "FluxTrainSave",
+      "pos": [
+        2699.6572265625,
+        429.3476257324219
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 294
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            417
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 180,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2693.283447265625,
+        301.1036682128906
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 415
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 328
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            294
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 174,
+      "type": "FluxTrainSave",
+      "pos": [
+        2694.82275390625,
+        12.642837524414062
+      ],
+      "size": [
+        393,
+        122
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 291
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            414
+          ]
+        },
+        {
+          "name": "lora_path",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 2,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainSave"
+      },
+      "widgets_values": [
+        false,
+        false
+      ]
+    },
+    {
+      "id": 175,
+      "type": "FluxTrainLoop",
+      "pos": [
+        2716.57861328125,
+        -114.39252471923828
+      ],
+      "size": [
+        393,
+        78
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 412
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 327
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "shape": 3,
+          "type": "NETWORKTRAINER",
+          "slot_index": 0,
+          "links": [
+            291
+          ]
+        },
+        {
+          "name": "steps",
+          "shape": 3,
+          "type": "INT",
+          "slot_index": 1,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "FluxTrainLoop"
+      },
+      "widgets_values": [
+        750
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 202,
+      "type": "SaveImage",
+      "pos": [
+        1715.1549072265625,
+        303.3367919921875
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 400
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 206,
+      "type": "SaveImage",
+      "pos": [
+        3187.239990234375,
+        -135.1564178466797
+      ],
+      "size": [
+        754.67333984375,
+        351.3834228515625
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 416
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        ""
+      ]
+    },
+    {
+      "id": 109,
+      "type": "TrainDatasetAdd",
+      "pos": [
+        -290.32537841796875,
+        -161.16163635253906
+      ],
+      "size": [
+        281.5897521972656,
+        354
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dataset_config",
+          "type": "JSON",
+          "link": 239
+        },
+        {
+          "name": "regularization",
+          "shape": 7,
+          "type": "JSON",
+          "link": null
+        },
+        {
+          "name": "dataset_path",
+          "type": "STRING",
+          "widget": {
+            "name": "dataset_path"
+          },
+          "link": 269
+        },
+        {
+          "name": "class_tokens",
+          "type": "STRING",
+          "widget": {
+            "name": "class_tokens"
+          },
+          "link": 357
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dataset",
+          "shape": 3,
+          "type": "JSON",
+          "slot_index": 0,
+          "links": [
+            380
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "TrainDatasetAdd"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1,
+        "input/training/",
+        "",
+        true,
+        false,
+        1,
+        256,
+        1024
+      ]
+    },
+    {
+      "id": 212,
+      "type": "Reroute",
+      "pos": [
+        2311.92578125,
+        2212.150634765625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 377
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VALSETTINGS",
+          "slot_index": 0,
+          "links": [
+            413,
+            418,
+            422,
+            426,
+            430
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 147,
+      "type": "Show any [Crystools]",
+      "pos": [
+        4104.52294921875,
+        1903.3529052734375
+      ],
+      "size": [
+        302.3999938964844,
+        160
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 61,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "any_value",
+          "shape": 7,
+          "type": "*",
+          "link": 246
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "576b44b9b79e3bf4b5d50457a28924d89a42e7e1",
+        "Node name for S&R": "Show any [Crystools]",
+        "aux_id": "crystian/ComfyUI-Crystools"
+      },
+      "widgets_values": [
+        false,
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 225,
+      "type": "Reroute",
+      "pos": [
+        226.35813903808594,
+        1809.1978759765625
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 375
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VALSETTINGS",
+          "slot_index": 0,
+          "links": [
+            376
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 224,
+      "type": "Reroute",
+      "pos": [
+        -298.6784973144531,
+        1325.0330810546875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 386
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VALSETTINGS",
+          "slot_index": 0,
+          "links": [
+            375
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 223,
+      "type": "Reroute",
+      "pos": [
+        1043.7918701171875,
+        2214.7333984375
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 376
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VALSETTINGS",
+          "links": [
+            377,
+            396,
+            398,
+            401,
+            406,
+            410
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 200,
+      "type": "Reroute",
+      "pos": [
+        2322.448974609375,
+        -302.3192443847656
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": 326
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "INT",
+          "slot_index": 0,
+          "links": [
+            327,
+            328,
+            329,
+            330,
+            331
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 199,
+      "type": "SimpleMath+",
+      "pos": [
+        835.7528076171875,
+        -357.2687683105469
+      ],
+      "size": [
+        210,
+        98
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "shape": 7,
+          "type": "INT,FLOAT",
+          "link": 333
+        },
+        {
+          "name": "b",
+          "shape": 7,
+          "type": "INT,FLOAT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "slot_index": 0,
+          "links": [
+            321,
+            322,
+            323,
+            324,
+            325,
+            326
+          ]
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_essentials",
+        "ver": "33ff89fd354d8ec3ab6affb605a79a931b445d99",
+        "Node name for S&R": "SimpleMath+"
+      },
+      "widgets_values": [
+        "a/10"
+      ]
+    },
+    {
+      "id": 228,
+      "type": "SDXLModelSelect",
+      "pos": [
+        625.5930786132812,
+        786.2962646484375
+      ],
+      "size": [
+        385.4800109863281,
+        82
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lora_path"
+          },
+          "link": null
+        },
+        {
+          "name": "checkpoint",
+          "type": "COMBO",
+          "widget": {
+            "name": "checkpoint"
+          },
+          "link": 390
+        }
+      ],
+      "outputs": [
+        {
+          "name": "sdxl_models",
+          "type": "TRAIN_SDXL_MODELS",
+          "slot_index": 0,
+          "links": [
+            389
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLModelSelect"
+      },
+      "widgets_values": [
+        "SDXL\\AnythingXL_xl.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 234,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        1290.808349609375,
+        158.35166931152344
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 393
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 396
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            394
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            395
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 235,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        1295.268310546875,
+        630.6383056640625
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 397
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 398
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            399
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            400
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 236,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        1281.268798828125,
+        1069.304931640625
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 402
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 401
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            404
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            403
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 237,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        1293.93505859375,
+        1498.63818359375
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 405
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 406
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            408
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            407
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 238,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        1290.6123046875,
+        1915.2989501953125
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 409
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 410
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            412
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            411
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 239,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        2741.161865234375,
+        191.2275390625
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 414
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 413
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            415
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            416
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 240,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        2734.583251953125,
+        625.7559814453125
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 417
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 418
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            420
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            419
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 241,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        2719.32421875,
+        1072.9951171875
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 421
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 422
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            423
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            424
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 242,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        2707.316162109375,
+        1511.7640380859375
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 425
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 426
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            427
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            428
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 243,
+      "type": "SDXLTrainValidate",
+      "pos": [
+        2703.909423828125,
+        1943.06494140625
+      ],
+      "size": [
+        312.3999938964844,
+        46
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "link": 429
+        },
+        {
+          "name": "validation_settings",
+          "shape": 7,
+          "type": "VALSETTINGS",
+          "link": 430
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            431
+          ]
+        },
+        {
+          "name": "validation_images",
+          "type": "IMAGE",
+          "links": [
+            432
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidate"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 226,
+      "type": "InitSDXLLoRATraining",
+      "pos": [
+        592.4588623046875,
+        -146.83602905273438
+      ],
+      "size": [
+        430.8000183105469,
+        748
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "SDXL_models",
+          "type": "TRAIN_SDXL_MODELS",
+          "link": 389
+        },
+        {
+          "name": "dataset",
+          "type": "JSON",
+          "link": 380
+        },
+        {
+          "name": "optimizer_settings",
+          "type": "ARGS",
+          "link": 434
+        },
+        {
+          "name": "resume_args",
+          "shape": 7,
+          "type": "ARGS",
+          "link": null
+        },
+        {
+          "name": "block_args",
+          "shape": 7,
+          "type": "ARGS",
+          "link": null
+        },
+        {
+          "name": "loss_args",
+          "shape": 7,
+          "type": "ARGS",
+          "link": null
+        },
+        {
+          "name": "network_config",
+          "shape": 7,
+          "type": "NETWORK_CONFIG",
+          "link": null
+        },
+        {
+          "name": "max_train_steps",
+          "type": "INT",
+          "widget": {
+            "name": "max_train_steps"
+          },
+          "link": 383
+        },
+        {
+          "name": "sample_prompts_pos",
+          "type": "STRING",
+          "widget": {
+            "name": "sample_prompts_pos"
+          },
+          "link": 384
+        },
+        {
+          "name": "sample_prompts_neg",
+          "type": "STRING",
+          "widget": {
+            "name": "sample_prompts_neg"
+          },
+          "link": 385
+        },
+        {
+          "name": "output_name",
+          "type": "STRING",
+          "widget": {
+            "name": "output_name"
+          },
+          "link": 387
+        }
+      ],
+      "outputs": [
+        {
+          "name": "network_trainer",
+          "type": "NETWORKTRAINER",
+          "links": [
+            381
+          ]
+        },
+        {
+          "name": "epochs_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "args",
+          "type": "KOHYA_ARGS",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "InitSDXLLoRATraining"
+      },
+      "widgets_values": [
+        "SDXL_lora",
+        "models/loras/test/",
+        16,
+        16,
+        1.0000000000000004,
+        1500,
+        "disk",
+        "disk",
+        true,
+        0,
+        false,
+        "fp32",
+        "fp16",
+        "sdpa",
+        "disabled",
+        0,
+        0,
+        "illustration of a kitten | photograph of a turtle",
+        "",
+        "enabled",
+        ""
+      ]
+    },
+    {
+      "id": 247,
+      "type": "OptimizerConfigProdigyPlusScheduleFree",
+      "pos": [
+        229.20726013183594,
+        -145.17831420898438
+      ],
+      "size": [
+        336,
+        400
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "optimizer_settings",
+          "type": "ARGS",
+          "links": [
+            434
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "OptimizerConfigProdigyPlusScheduleFree"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0,
+        0.000001,
+        1,
+        true,
+        false,
+        5,
+        true,
+        false,
+        false,
+        false,
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 232,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        290.8973083496094,
+        781.4932861328125
+      ],
+      "size": [
+        309.36090087890625,
+        154
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "token",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "token"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "slot_index": 0,
+          "links": [
+            390
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "420dbcf048d0a4af889152c7b5a36b85fa1dc8c1",
+        "Node name for S&R": "Hugging Face Download Model",
+        "aux_id": "jnxmx/ComfyUI_HuggingFace_Downloader"
+      },
+      "widgets_values": [
+        "checkpoints",
+        "https://huggingface.co/RunDiffusion/Juggernaut-XI-v11/resolve/main/Juggernaut-XI-byRunDiffusion.safetensors?download=true",
+        "",
+        "",
+        false
+      ]
+    },
+    {
+      "id": 151,
+      "type": "Primitive string [Crystools]",
+      "pos": [
+        -848.8645629882812,
+        -146.42515563964844
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            387
+          ]
+        }
+      ],
+      "title": "Filename",
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "576b44b9b79e3bf4b5d50457a28924d89a42e7e1",
+        "Node name for S&R": "Primitive string [Crystools]",
+        "aux_id": "crystian/ComfyUI-Crystools"
+      },
+      "widgets_values": [
+        "lora_name"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 152,
+      "type": "Primitive string [Crystools]",
+      "pos": [
+        -844.3029174804688,
+        -39.494930267333984
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            269
+          ]
+        }
+      ],
+      "title": "Dataset folder",
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "576b44b9b79e3bf4b5d50457a28924d89a42e7e1",
+        "Node name for S&R": "Primitive string [Crystools]",
+        "aux_id": "crystian/ComfyUI-Crystools"
+      },
+      "widgets_values": [
+        "input/dataset"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 154,
+      "type": "Primitive integer [Crystools]",
+      "pos": [
+        -839.9869995117188,
+        68.22368621826172
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "int",
+          "type": "INT",
+          "slot_index": 0,
+          "links": [
+            333,
+            383
+          ]
+        }
+      ],
+      "title": "Train steps",
+      "properties": {
+        "cnr_id": "comfyui-crystools",
+        "ver": "576b44b9b79e3bf4b5d50457a28924d89a42e7e1",
+        "Node name for S&R": "Primitive integer [Crystools]",
+        "aux_id": "crystian/ComfyUI-Crystools"
+      },
+      "widgets_values": [
+        1500
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 231,
+      "type": "SDXLTrainValidationSettings",
+      "pos": [
+        -818.9862060546875,
+        882.9292602539062
+      ],
+      "size": [
+        311.5621337890625,
+        205.79879760742188
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "validation_settings",
+          "type": "VALSETTINGS",
+          "links": [
+            386
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "1.0.2",
+        "Node name for S&R": "SDXLTrainValidationSettings"
+      },
+      "widgets_values": [
+        20,
+        1024,
+        1024,
+        5.000000000000001,
+        "euler",
+        42,
+        "fixed"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "TrainDatasetGeneralConfig",
+      "pos": [
+        -278.5113525390625,
+        245.90609741210938
+      ],
+      "size": [
+        304,
+        202
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "dataset_general",
+          "shape": 3,
+          "type": "JSON",
+          "links": [
+            239
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-fluxtrainer",
+        "ver": "639b3e80ba66e42605a34f393b576cd489e06734",
+        "Node name for S&R": "TrainDatasetGeneralConfig"
+      },
+      "widgets_values": [
+        false,
+        false,
+        false,
+        0,
+        false,
+        false,
+        ".txt"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "StringConstantMultiline",
+      "pos": [
+        -842.5863647460938,
+        173.82821655273438
+      ],
+      "size": [
+        330.6578674316406,
+        236.11566162109375
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            384
+          ]
+        }
+      ],
+      "title": "Prompts for tests (separate by | )",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+        "Node name for S&R": "StringConstantMultiline",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "Prompt 1 | Prompt 2",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 230,
+      "type": "StringConstantMultiline",
+      "pos": [
+        -837.6170043945312,
+        457.439208984375
+      ],
+      "size": [
+        378,
+        236.11566162109375
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 3,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            385
+          ]
+        }
+      ],
+      "title": "Prompts for tests (separate by | if multiple)",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "a5bd3c86c8ed6b83c55c2d0e7a59515b15a0137f",
+        "Node name for S&R": "StringConstantMultiline",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "blurry, low quality",
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 217,
+      "type": "PrimitiveNode",
+      "pos": [
+        -828.9400024414062,
+        742.8685913085938
+      ],
+      "size": [
+        317.7361145019531,
+        88
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "class_tokens"
+          },
+          "slot_index": 0,
+          "links": [
+            357
+          ]
+        }
+      ],
+      "title": "class_token",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    }
+  ],
+  "links": [
+    [
+      218,
+      4,
+      0,
+      14,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      230,
+      133,
+      2,
+      89,
+      1,
+      "STRING"
+    ],
+    [
+      239,
+      137,
+      0,
+      109,
+      0,
+      "JSON"
+    ],
+    [
+      246,
+      89,
+      1,
+      147,
+      0,
+      "*"
+    ],
+    [
+      269,
+      152,
+      0,
+      109,
+      2,
+      "STRING"
+    ],
+    [
+      278,
+      157,
+      0,
+      158,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      284,
+      168,
+      0,
+      167,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      289,
+      171,
+      0,
+      172,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      291,
+      175,
+      0,
+      174,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      294,
+      180,
+      0,
+      177,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      300,
+      194,
+      0,
+      183,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      302,
+      186,
+      0,
+      185,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      305,
+      191,
+      0,
+      188,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      318,
+      197,
+      0,
+      196,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      321,
+      199,
+      0,
+      4,
+      1,
+      "INT"
+    ],
+    [
+      322,
+      199,
+      0,
+      157,
+      1,
+      "INT"
+    ],
+    [
+      323,
+      199,
+      0,
+      168,
+      1,
+      "INT"
+    ],
+    [
+      324,
+      199,
+      0,
+      171,
+      1,
+      "INT"
+    ],
+    [
+      325,
+      199,
+      0,
+      197,
+      1,
+      "INT"
+    ],
+    [
+      326,
+      199,
+      0,
+      200,
+      0,
+      "*"
+    ],
+    [
+      327,
+      200,
+      0,
+      175,
+      1,
+      "INT"
+    ],
+    [
+      328,
+      200,
+      0,
+      180,
+      1,
+      "INT"
+    ],
+    [
+      329,
+      200,
+      0,
+      194,
+      1,
+      "INT"
+    ],
+    [
+      330,
+      200,
+      0,
+      186,
+      1,
+      "INT"
+    ],
+    [
+      331,
+      200,
+      0,
+      191,
+      1,
+      "INT"
+    ],
+    [
+      333,
+      154,
+      0,
+      199,
+      0,
+      "*"
+    ],
+    [
+      357,
+      217,
+      0,
+      109,
+      3,
+      "STRING"
+    ],
+    [
+      375,
+      224,
+      0,
+      225,
+      0,
+      "*"
+    ],
+    [
+      376,
+      225,
+      0,
+      223,
+      0,
+      "*"
+    ],
+    [
+      377,
+      223,
+      0,
+      212,
+      0,
+      "*"
+    ],
+    [
+      380,
+      109,
+      0,
+      226,
+      1,
+      "JSON"
+    ],
+    [
+      381,
+      226,
+      0,
+      4,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      383,
+      154,
+      0,
+      226,
+      7,
+      "INT"
+    ],
+    [
+      384,
+      135,
+      0,
+      226,
+      8,
+      "STRING"
+    ],
+    [
+      385,
+      230,
+      0,
+      226,
+      9,
+      "STRING"
+    ],
+    [
+      386,
+      231,
+      0,
+      224,
+      0,
+      "*"
+    ],
+    [
+      387,
+      151,
+      0,
+      226,
+      10,
+      "STRING"
+    ],
+    [
+      389,
+      228,
+      0,
+      226,
+      0,
+      "TRAIN_SDXL_MODELS"
+    ],
+    [
+      390,
+      232,
+      0,
+      228,
+      1,
+      "COMBO"
+    ],
+    [
+      393,
+      14,
+      0,
+      234,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      394,
+      234,
+      0,
+      157,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      395,
+      234,
+      1,
+      201,
+      0,
+      "IMAGE"
+    ],
+    [
+      396,
+      223,
+      0,
+      234,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      397,
+      158,
+      0,
+      235,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      398,
+      223,
+      0,
+      235,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      399,
+      235,
+      0,
+      168,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      400,
+      235,
+      1,
+      202,
+      0,
+      "IMAGE"
+    ],
+    [
+      401,
+      223,
+      0,
+      236,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      402,
+      167,
+      0,
+      236,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      403,
+      236,
+      1,
+      203,
+      0,
+      "IMAGE"
+    ],
+    [
+      404,
+      236,
+      0,
+      171,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      405,
+      172,
+      0,
+      237,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      406,
+      223,
+      0,
+      237,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      407,
+      237,
+      1,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      408,
+      237,
+      0,
+      197,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      409,
+      196,
+      0,
+      238,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      410,
+      223,
+      0,
+      238,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      411,
+      238,
+      1,
+      205,
+      0,
+      "IMAGE"
+    ],
+    [
+      412,
+      238,
+      0,
+      175,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      413,
+      212,
+      0,
+      239,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      414,
+      174,
+      0,
+      239,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      415,
+      239,
+      0,
+      180,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      416,
+      239,
+      1,
+      206,
+      0,
+      "IMAGE"
+    ],
+    [
+      417,
+      177,
+      0,
+      240,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      418,
+      212,
+      0,
+      240,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      419,
+      240,
+      1,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      420,
+      240,
+      0,
+      194,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      421,
+      183,
+      0,
+      241,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      422,
+      212,
+      0,
+      241,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      423,
+      241,
+      0,
+      186,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      424,
+      241,
+      1,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      425,
+      185,
+      0,
+      242,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      426,
+      212,
+      0,
+      242,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      427,
+      242,
+      0,
+      191,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      428,
+      242,
+      1,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      429,
+      188,
+      0,
+      243,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      430,
+      212,
+      0,
+      243,
+      1,
+      "VALSETTINGS"
+    ],
+    [
+      431,
+      243,
+      0,
+      133,
+      0,
+      "NETWORKTRAINER"
+    ],
+    [
+      432,
+      243,
+      1,
+      210,
+      0,
+      "IMAGE"
+    ],
+    [
+      434,
+      247,
+      0,
+      226,
+      2,
+      "ARGS"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 2,
+      "title": "Settings and init",
+      "bounding": [
+        213.41204833984375,
+        -235.33180236816406,
+        814.1278686523438,
+        866.0252075195312
+      ],
+      "color": "#b06634",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 6,
+      "title": "Controls",
+      "bounding": [
+        -873.7753295898438,
+        -231.94570922851562,
+        394.4656066894531,
+        1354.2276611328125
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 9,
+      "title": "Dataset",
+      "bounding": [
+        -304.1072082519531,
+        -234.761474609375,
+        340.8882141113281,
+        698.6137084960938
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 10,
+      "title": "Training with previews",
+      "bounding": [
+        1227.2392578125,
+        -248.7564697265625,
+        2779.775146484375,
+        2322.976806640625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 11,
+      "title": "End",
+      "bounding": [
+        4075.003173828125,
+        1402.2347412109375,
+        347.7857666015625,
+        671.1179809570312
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    },
+    {
+      "id": 12,
+      "title": "Hugging Face Downloaders",
+      "bounding": [
+        261.9992980957031,
+        674.59130859375,
+        767.0140380859375,
+        275.7680969238281
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {
+        "pinned": true
+      }
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015777,
+      "offset": [
+        1468.2559498196808,
+        355.17369654797415
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "node_versions": {
+      "comfy-core": "0.3.14",
+      "comfyui-fluxtrainer": "639b3e80ba66e42605a34f393b576cd489e06734",
+      "ComfyUI-KJNodes": "86b5453a5ca9ecb883eedc9d0a96bf942b9ca73e",
+      "ComfyUI-Crystools": "72e2e9af4a6b9a58ca5d753cacff37ba1ff9bfa8"
+    },
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
