@@ -1,0 +1,354 @@
+{
+  "id": "13e86673-3ca6-4cd0-a1d9-d8e5552343ff",
+  "revision": 0,
+  "last_node_id": 342,
+  "last_link_id": 647,
+  "nodes": [
+    {
+      "id": 342,
+      "type": "ReduxAdvanced",
+      "pos": [
+        -429.1129455566406,
+        -1196.28955078125
+      ],
+      "size": [
+        289.4140625,
+        234
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "style_model",
+          "type": "STYLE_MODEL",
+          "link": 642
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 643
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 644
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": []
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_AdvancedRefluxControl",
+        "ver": "2b95c2c866399ca1914b4da486fe52808f7a9c60",
+        "Node name for S&R": "ReduxAdvanced"
+      },
+      "widgets_values": [
+        2,
+        "area",
+        "center crop (square)",
+        1,
+        0.1
+      ]
+    },
+    {
+      "id": 332,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -403.15966796875,
+        -806.243408203125
+      ],
+      "size": [
+        295.2369079589844,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            612
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "clip_vision",
+        "https://huggingface.co/Comfy-Org/sigclip_vision_384/resolve/main/sigclip_vision_patch14_384.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 331,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        -413.04083251953125,
+        -918.2066040039062
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": 612
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            643
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 327,
+      "type": "StyleModelLoader",
+      "pos": [
+        -417.1020812988281,
+        -753.8796997070312
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "style_model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "style_model_name"
+          },
+          "link": 608
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STYLE_MODEL",
+          "type": "STYLE_MODEL",
+          "links": [
+            642
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "StyleModelLoader"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 328,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -386.4098205566406,
+        -646.9645385742188
+      ],
+      "size": [
+        295.2369079589844,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            608
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "style_models",
+        "https://huggingface.co/Comfy-Org/Flux1-Redux-Dev/resolve/main/flux1-redux-dev.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 333,
+      "type": "LoadImage",
+      "pos": [
+        -417.759521484375,
+        -590.0687255859375
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            644
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "images (2).jpeg",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      608,
+      328,
+      0,
+      327,
+      0,
+      "COMBO"
+    ],
+    [
+      612,
+      332,
+      0,
+      331,
+      0,
+      "COMBO"
+    ],
+    [
+      642,
+      327,
+      0,
+      342,
+      1,
+      "STYLE_MODEL"
+    ],
+    [
+      643,
+      331,
+      0,
+      342,
+      2,
+      "CLIP_VISION"
+    ],
+    [
+      644,
+      333,
+      0,
+      342,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 10,
+      "title": "Redux",
+      "bounding": [
+        -443.3699035644531,
+        -1284.091796875,
+        320.58111572265625,
+        1199.9156494140625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8390545288824335,
+      "offset": [
+        987.7074395271443,
+        1331.7528382301164
+      ]
+    },
+    "frontendVersion": "1.24.1",
+    "node_versions": {
+      "comfy-core": "0.3.14",
+      "ComfyUI-KJNodes": "095c8d4b526ba3c1f12fd9dd1d7f3540c6a11358"
+    },
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

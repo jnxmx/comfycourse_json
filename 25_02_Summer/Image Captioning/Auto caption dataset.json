@@ -1,0 +1,424 @@
+{
+  "id": "c9bcbdcf-3b2f-4fa5-965c-a7bb813661d0",
+  "revision": 0,
+  "last_node_id": 54,
+  "last_link_id": 67,
+  "nodes": [
+    {
+      "id": 40,
+      "type": "Note",
+      "pos": [
+        160.11178588867188,
+        555.7677001953125
+      ],
+      "size": [
+        287.60546875,
+        156.65625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Здесь в верхнем поле мы можем описать фразу с токеном общую для всех изображений, она будет добавлена в начало промпта."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 43,
+      "type": "Note",
+      "pos": [
+        -148.22805786132812,
+        751.0562133789062
+      ],
+      "size": [
+        253.48846435546875,
+        157.6705322265625
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Caption length регулирует длину описания."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 27,
+      "type": "JJC_JoyCaption",
+      "pos": [
+        -154.73434448242188,
+        333.6392822265625
+      ],
+      "size": [
+        270,
+        366
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "query",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "joycaption_comfyui",
+        "ver": "1.0.0",
+        "Node name for S&R": "JJC_JoyCaption",
+        "aux_id": "fpgaminer/joycaption_comfyui"
+      },
+      "widgets_values": [
+        "Default",
+        "Descriptive",
+        "100",
+        "If it is a work of art, do not include the artist's name or the title of the work.",
+        "Your response will be used by a text-to-image model, so avoid useless meta phrases like “This image shows…”, \"You are looking at...\", etc.",
+        "",
+        "",
+        "",
+        "",
+        512,
+        0.6,
+        0.9,
+        0
+      ]
+    },
+    {
+      "id": 29,
+      "type": "StringConcatenate",
+      "pos": [
+        152.59408569335938,
+        335.9812927246094
+      ],
+      "size": [
+        301.0822448730469,
+        166
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Artwork by TOKEN_NAME",
+        "",
+        " "
+      ]
+    },
+    {
+      "id": 32,
+      "type": "SaveImageKJ",
+      "pos": [
+        490.40997314453125,
+        206.7537841796875
+      ],
+      "size": [
+        282.751953125,
+        126
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "caption",
+          "shape": 7,
+          "type": "STRING",
+          "link": 45
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "aeab1a7de581dc7253f48257392e8287bbeee4a9",
+        "Node name for S&R": "SaveImageKJ",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "dataset/image",
+        "",
+        ".txt"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "Note",
+      "pos": [
+        -448.42333984375,
+        454.4384765625
+      ],
+      "size": [
+        253.48846435546875,
+        157.6705322265625
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Загрузите папку с картинками в input под любым именем (в filebrowser можно просто её перетащить)\nПропишите путь к папке в поле directory\n\nПример: у вас была папка forLora\nВы её забросили в input\nЗначит нужно в directory прописать\ninput/forLora"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 54,
+      "type": "StringReplace",
+      "pos": [
+        95.32508087158203,
+        280.426513671875
+      ],
+      "size": [
+        210,
+        196
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "widget": {
+            "name": "string"
+          },
+          "link": 66
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            67
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41",
+        "Node name for S&R": "StringReplace"
+      },
+      "widgets_values": [
+        "",
+        "input/",
+        ""
+      ]
+    },
+    {
+      "id": 51,
+      "type": "LoadImageListFromDir //Inspire",
+      "pos": [
+        -454.20281982421875,
+        211.08798217773438
+      ],
+      "size": [
+        261.6568298339844,
+        194
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "shape": 6,
+          "type": "IMAGE",
+          "links": [
+            63,
+            64
+          ]
+        },
+        {
+          "name": "MASK",
+          "shape": 6,
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "FILE PATH",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            66
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inspire-pack",
+        "ver": "1.20.0",
+        "Node name for S&R": "LoadImageListFromDir //Inspire"
+      },
+      "widgets_values": [
+        "input/НАЗВАНИЕ-ПАПКИ",
+        0,
+        0,
+        false,
+        "Alphabetical (ASC)"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Note",
+      "pos": [
+        499.6236877441406,
+        391.1507873535156
+      ],
+      "size": [
+        274.14764404296875,
+        156.9140625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Этот нод сохранит файлы картинок и текстов в директорию input/dataset"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      39,
+      27,
+      1,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      45,
+      29,
+      0,
+      32,
+      1,
+      "STRING"
+    ],
+    [
+      63,
+      51,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      51,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      66,
+      51,
+      2,
+      54,
+      0,
+      "STRING"
+    ],
+    [
+      67,
+      54,
+      0,
+      32,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.620921323059155,
+      "offset": [
+        943.2377539613985,
+        -57.718195156391346
+      ]
+    },
+    "frontendVersion": "1.23.0",
+    "workspace_info": {
+      "id": "AJRGb9_QORD709cjq4MDg"
+    },
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

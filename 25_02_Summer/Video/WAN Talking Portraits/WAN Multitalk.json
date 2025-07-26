@@ -1,0 +1,2625 @@
+{
+  "id": "8b7a9a57-2303-4ef5-9fc2-bf41713bd1fc",
+  "revision": 0,
+  "last_node_id": 211,
+  "last_link_id": 358,
+  "nodes": [
+    {
+      "id": 199,
+      "type": "SaveVideo",
+      "pos": [
+        3343.7578125,
+        -2431.813232421875
+      ],
+      "size": [
+        1000.5966186523438,
+        664.3754272460938
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 337
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 202,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -440.05987548828125,
+        -2823.983642578125
+      ],
+      "size": [
+        816.4558715820312,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            341
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model",
+        "aux_id": "jnxmx/ComfyUI_HuggingFace_Downloader"
+      },
+      "widgets_values": [
+        "vae",
+        "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 191,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -445.81591796875,
+        -2655.766845703125
+      ],
+      "size": [
+        885.2992553710938,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            327
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "diffusion_models",
+        "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp8_e4m3fn.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 129,
+      "type": "WanVideoVAELoader",
+      "pos": [
+        551.1879272460938,
+        -2843.4873046875
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          },
+          "link": 341
+        }
+      ],
+      "outputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "slot_index": 0,
+          "links": [
+            193,
+            199,
+            311
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "c3ee35f3ece76e38099dc516182d69b406e16772",
+        "Node name for S&R": "WanVideoVAELoader"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors",
+        "bf16"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 200,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -437.4053649902344,
+        -2502.17919921875
+      ],
+      "size": [
+        874.1712036132812,
+        106
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            340
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model",
+        "aux_id": "jnxmx/ComfyUI_HuggingFace_Downloader"
+      },
+      "widgets_values": [
+        "loras",
+        "https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/blob/main/FusionX_LoRa/Wan2.1_I2V_14B_FusionX_LoRA.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 122,
+      "type": "WanVideoModelLoader",
+      "pos": [
+        877.9729614257812,
+        -2703.065673828125
+      ],
+      "size": [
+        211.083984375,
+        274
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "compile_args",
+          "shape": 7,
+          "type": "WANCOMPILEARGS",
+          "link": 299
+        },
+        {
+          "name": "block_swap_args",
+          "shape": 7,
+          "type": "BLOCKSWAPARGS",
+          "link": 201
+        },
+        {
+          "name": "lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": 256
+        },
+        {
+          "name": "vram_management_args",
+          "shape": 7,
+          "type": "VRAM_MANAGEMENTARGS",
+          "link": null
+        },
+        {
+          "name": "vace_model",
+          "shape": 7,
+          "type": "VACEPATH",
+          "link": null
+        },
+        {
+          "name": "fantasytalking_model",
+          "shape": 7,
+          "type": "FANTASYTALKINGMODEL",
+          "link": null
+        },
+        {
+          "name": "multitalk_model",
+          "shape": 7,
+          "type": "MULTITALKMODEL",
+          "link": 270
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          },
+          "link": 327
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "links": [
+            197
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "WanVideoModelLoader"
+      },
+      "widgets_values": [
+        "WanVideo\\Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors",
+        "fp16",
+        "fp8_e4m3fn",
+        "offload_device",
+        "sageattn"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 134,
+      "type": "WanVideoBlockSwap",
+      "pos": [
+        563.43017578125,
+        -2709.041748046875
+      ],
+      "size": [
+        281.404296875,
+        154
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "block_swap_args",
+          "type": "BLOCKSWAPARGS",
+          "links": [
+            201
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "WanVideoBlockSwap"
+      },
+      "widgets_values": [
+        10,
+        false,
+        false,
+        true,
+        0
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 177,
+      "type": "WanVideoTorchCompileSettings",
+      "pos": [
+        568.0567016601562,
+        -2506.108642578125
+      ],
+      "size": [
+        282.74609375,
+        202
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "torch_compile_args",
+          "type": "WANCOMPILEARGS",
+          "links": [
+            299
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "f3614e6720744247f3211d60f7b9333f43572384",
+        "Node name for S&R": "WanVideoTorchCompileSettings"
+      },
+      "widgets_values": [
+        "inductor",
+        false,
+        "default",
+        false,
+        64,
+        true,
+        128
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 138,
+      "type": "WanVideoLoraSelect",
+      "pos": [
+        572.4320068359375,
+        -2255.177490234375
+      ],
+      "size": [
+        276.48663330078125,
+        188
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_lora",
+          "shape": 7,
+          "type": "WANVIDLORA",
+          "link": null
+        },
+        {
+          "name": "blocks",
+          "shape": 7,
+          "type": "SELECTEDBLOCKS",
+          "link": null
+        },
+        {
+          "name": "lora",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora"
+          },
+          "link": 340
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lora",
+          "type": "WANVIDLORA",
+          "links": [
+            256
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "WanVideoLoraSelect"
+      },
+      "widgets_values": [
+        "Wan2.1_T2V_14B_FusionX_LoRA.safetensors",
+        1.2000000000000002,
+        false
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 120,
+      "type": "MultiTalkModelLoader",
+      "pos": [
+        576.7924194335938,
+        -2021.540771484375
+      ],
+      "size": [
+        266.9547424316406,
+        82
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          },
+          "link": 326
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MULTITALKMODEL",
+          "links": [
+            270
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "MultiTalkModelLoader"
+      },
+      "widgets_values": [
+        "WanVideo\\multitalk.safetensors",
+        "fp16"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 192,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -428.1053466796875,
+        -2349.18408203125
+      ],
+      "size": [
+        861.0371704101562,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            326
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "diffusion_models",
+        "https://huggingface.co/MeiGen-AI/MeiGen-MultiTalk/blob/main/multitalk.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 204,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -418.1408996582031,
+        -2180.489990234375
+      ],
+      "size": [
+        837.8515014648438,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            343
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model",
+        "aux_id": "jnxmx/ComfyUI_HuggingFace_Downloader"
+      },
+      "widgets_values": [
+        "clip",
+        "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp16.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 173,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        584.4879150390625,
+        -1700.7586669921875
+      ],
+      "size": [
+        252.04605102539062,
+        58
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": 334
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            288
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41",
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "clip_vision_h.safetensors"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 195,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        -412.6467590332031,
+        -2013.567626953125
+      ],
+      "size": [
+        831.4124755859375,
+        107.6797866821289
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            334
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "clip_vision",
+        "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/clip_vision/clip_vision_h.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 133,
+      "type": "LoadImage",
+      "pos": [
+        1215.0810546875,
+        -2358.673095703125
+      ],
+      "size": [
+        341.23583984375,
+        424.5613708496094
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            283
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "generation-c32b2fcd-9dc3-4774-8458-2725c2d49eb0.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 136,
+      "type": "LoadWanVideoT5TextEncoder",
+      "pos": [
+        579.7179565429688,
+        -1882.1124267578125
+      ],
+      "size": [
+        268.8056945800781,
+        130
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          },
+          "link": 343
+        }
+      ],
+      "outputs": [
+        {
+          "name": "wan_t5_model",
+          "type": "WANTEXTENCODER",
+          "links": [
+            349,
+            351
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "LoadWanVideoT5TextEncoder"
+      },
+      "widgets_values": [
+        "umt5_xxl_fp16.safetensors",
+        "bf16",
+        "offload_device",
+        "disabled"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 187,
+      "type": "MultiTalkWav2VecEmbeds",
+      "pos": [
+        1958.73828125,
+        -1679.0103759765625
+      ],
+      "size": [
+        279.0951232910156,
+        278
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "wav2vec_model",
+          "type": "WAV2VECMODEL",
+          "link": 317
+        },
+        {
+          "name": "audio_1",
+          "type": "AUDIO",
+          "link": 328
+        },
+        {
+          "name": "audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "audio_3",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "audio_4",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "ref_target_masks",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "num_frames",
+          "type": "INT",
+          "widget": {
+            "name": "num_frames"
+          },
+          "link": 319
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 346
+        }
+      ],
+      "outputs": [
+        {
+          "name": "multitalk_embeds",
+          "type": "MULTITALK_EMBEDS",
+          "links": [
+            320
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "3d7801cee4c8e3106078dd9b9f146caee95069ba",
+        "Node name for S&R": "MultiTalkWav2VecEmbeds"
+      },
+      "widgets_values": [
+        true,
+        81,
+        25,
+        1,
+        1,
+        "para"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "WanVideoDecode",
+      "pos": [
+        3345.247314453125,
+        -2740.197265625
+      ],
+      "size": [
+        315,
+        198
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 193
+        },
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            196,
+            339,
+            338
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "c3ee35f3ece76e38099dc516182d69b406e16772",
+        "Node name for S&R": "WanVideoDecode"
+      },
+      "widgets_values": [
+        false,
+        272,
+        272,
+        144,
+        128,
+        "default"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 125,
+      "type": "LoadAudio",
+      "pos": [
+        1205.4302978515625,
+        -1884.272705078125
+      ],
+      "size": [
+        357.32049560546875,
+        136
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            328,
+            355,
+            356
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.41",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "Record (online-voice-recorder.com) (6).mp3",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 137,
+      "type": "DownloadAndLoadWav2VecModel",
+      "pos": [
+        1955.361328125,
+        -1828.6898193359375
+      ],
+      "size": [
+        282.14093017578125,
+        106
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "wav2vec_model",
+          "type": "WAV2VECMODEL",
+          "links": [
+            317
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "DownloadAndLoadWav2VecModel"
+      },
+      "widgets_values": [
+        "TencentGameMate/chinese-wav2vec2-base",
+        "fp16",
+        "main_device"
+      ]
+    },
+    {
+      "id": 206,
+      "type": "PrimitiveNode",
+      "pos": [
+        1586.715087890625,
+        -2419.393798828125
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "links": [
+            345
+          ]
+        }
+      ],
+      "title": "height",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        480,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 205,
+      "type": "PrimitiveNode",
+      "pos": [
+        1588.5535888671875,
+        -2543.31640625
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "links": [
+            344
+          ]
+        }
+      ],
+      "title": "width",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        848,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 189,
+      "type": "WanVideoContextOptions",
+      "pos": [
+        1592.2056884765625,
+        -2058.8720703125
+      ],
+      "size": [
+        218.6280517578125,
+        202
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "context_options",
+          "type": "WANVIDCONTEXT",
+          "links": [
+            321
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "3d7801cee4c8e3106078dd9b9f146caee95069ba",
+        "Node name for S&R": "WanVideoContextOptions"
+      },
+      "widgets_values": [
+        "static_standard",
+        81,
+        4,
+        32,
+        true,
+        false,
+        "linear"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 210,
+      "type": "WanVideoTextEncodeSingle",
+      "pos": [
+        1223.2564697265625,
+        -2591.27392578125
+      ],
+      "size": [
+        336.7985534667969,
+        191.85044860839844
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "t5",
+          "type": "WANTEXTENCODER",
+          "link": 351
+        },
+        {
+          "name": "model_to_offload",
+          "shape": 7,
+          "type": "WANVIDEOMODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "links": [
+            347
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-wanvideowrapper",
+        "ver": "1.2.4",
+        "Node name for S&R": "WanVideoTextEncodeSingle"
+      },
+      "widgets_values": [
+        "bright tones, overexposed, static, blurred details, subtitles, style, works, paintings, images, static, overall gray, worst quality, low quality, JPEG compression residue, ugly, incomplete, extra fingers, poorly drawn hands, poorly drawn faces, deformed, disfigured, misshapen limbs, fused fingers, still picture, messy background, three legs, many people in the background, walking backwards",
+        true
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 171,
+      "type": "ImageResizeKJv2",
+      "pos": [
+        1948.7340087890625,
+        -2206.10888671875
+      ],
+      "size": [
+        270,
+        336
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 283
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 344
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 345
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            352,
+            353,
+            354
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            290
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            291
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "f7eb33abc80a2aded1b46dff0dd14d07856a7d50",
+        "Node name for S&R": "ImageResizeKJv2"
+      },
+      "widgets_values": [
+        848,
+        480,
+        "lanczos",
+        "crop",
+        "0, 0, 0",
+        "center",
+        16,
+        "cpu",
+        "<tr><td>Output: </td><td><b>1</b> x <b>848</b> x <b>480 | 4.66MB</b></td></tr>"
+      ]
+    },
+    {
+      "id": 207,
+      "type": "PrimitiveNode",
+      "pos": [
+        1593.79541015625,
+        -2185.205322265625
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "links": [
+            346,
+            357,
+            358
+          ]
+        }
+      ],
+      "title": "fps",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        25,
+        "fixed"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 197,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        4033.551025390625,
+        -2762.81884765625
+      ],
+      "size": [
+        219.3603515625,
+        262
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 339
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 356
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 358
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_VideoCombine",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite"
+      },
+      "widgets_values": {
+        "frame_rate": 25,
+        "loop_count": 0,
+        "filename_prefix": "video/ProRes",
+        "format": "video/ProRes",
+        "profile": "hq",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "ProRes_00003-audio.mov",
+            "subfolder": "video",
+            "type": "output",
+            "format": "video/ProRes",
+            "frame_rate": 16,
+            "workflow": "ProRes_00003.png",
+            "fullpath": "/workspace/ComfyUI/output/video/ProRes_00003-audio.mov"
+          }
+        }
+      }
+    },
+    {
+      "id": 198,
+      "type": "CreateVideo",
+      "pos": [
+        3688.74267578125,
+        -2546.218505859375
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 338
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 355
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 357
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            337
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.34",
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        25
+      ]
+    },
+    {
+      "id": 186,
+      "type": "VHS_DuplicateImages",
+      "pos": [
+        2291.597900390625,
+        -2272.7900390625
+      ],
+      "size": [
+        275.6785583496094,
+        78
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 354
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            314
+          ]
+        },
+        {
+          "name": "count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "0a75c7958fe320efcb052f1d9f8451fd20c730a8",
+        "Node name for S&R": "VHS_DuplicateImages"
+      },
+      "widgets_values": {
+        "multiply_by": 81
+      }
+    },
+    {
+      "id": 194,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        2276.180908203125,
+        -2437.880859375
+      ],
+      "size": [
+        295.2369079589844,
+        106
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            332
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "controlnet",
+        "https://huggingface.co/Kijai/WanVideo_comfy/blob/main/Wan21_Uni3C_controlnet_fp16.safetensors",
+        ""
+      ]
+    },
+    {
+      "id": 182,
+      "type": "WanVideoUni3C_embeds",
+      "pos": [
+        2605.49072265625,
+        -2221.362548828125
+      ],
+      "size": [
+        270,
+        146
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "controlnet",
+          "type": "WANVIDEOCONTROLNET",
+          "link": 309
+        },
+        {
+          "name": "render_latent",
+          "type": "LATENT",
+          "link": 310
+        },
+        {
+          "name": "render_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "uni3c_embeds",
+          "type": "UNI3C_EMBEDS",
+          "links": [
+            308
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "f3614e6720744247f3211d60f7b9333f43572384",
+        "Node name for S&R": "WanVideoUni3C_embeds"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0.10000000000000002
+      ]
+    },
+    {
+      "id": 188,
+      "type": "Note",
+      "pos": [
+        2284.886474609375,
+        -2582.69580078125
+      ],
+      "size": [
+        239.9966278076172,
+        88
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Uni3C control is used here only to lock the camera, which improves results when using context windows"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 183,
+      "type": "WanVideoUni3C_ControlnetLoader",
+      "pos": [
+        2595.16357421875,
+        -2429.22998046875
+      ],
+      "size": [
+        300.9346618652344,
+        154.42153930664062
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "compile_args",
+          "shape": 7,
+          "type": "WANCOMPILEARGS",
+          "link": null
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "widget": {
+            "name": "model"
+          },
+          "link": 332
+        }
+      ],
+      "outputs": [
+        {
+          "name": "controlnet",
+          "type": "WANVIDEOCONTROLNET",
+          "links": [
+            309
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "f3614e6720744247f3211d60f7b9333f43572384",
+        "Node name for S&R": "WanVideoUni3C_ControlnetLoader"
+      },
+      "widgets_values": [
+        "Wan21_Uni3C_controlnet_fp16.safetensors",
+        "fp16",
+        "fp8_e4m3fn",
+        "main_device",
+        "sageattn"
+      ]
+    },
+    {
+      "id": 209,
+      "type": "WanVideoTextEncodeSingle",
+      "pos": [
+        1229.5599365234375,
+        -2839.939453125
+      ],
+      "size": [
+        324.97503662109375,
+        200.43911743164062
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "t5",
+          "type": "WANTEXTENCODER",
+          "link": 349
+        },
+        {
+          "name": "model_to_offload",
+          "shape": 7,
+          "type": "WANVIDEOMODEL",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "links": [
+            348
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-wanvideowrapper",
+        "ver": "1.2.4",
+        "Node name for S&R": "WanVideoTextEncodeSingle"
+      },
+      "widgets_values": [
+        "Stationary camera view of A woman passionately singing into a professional microphone in a recording studio. She wears large black headphones and a dark cardigan over a gray top. Her long, wavy brown hair frames her face as she looks slightly upwards, her mouth open mid-song. The studio is equipped with various audio equipment, including a mixing console and a keyboard, with soundproofing panels on the walls. The lighting is warm and focused on her, creating a professional and intimate atmosphere. A close-up shot captures her expressive performance.",
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 208,
+      "type": "WanVideoApplyNAG",
+      "pos": [
+        1599.2137451171875,
+        -2723.675048828125
+      ],
+      "size": [
+        227.77734375,
+        131.4705352783203
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "original_text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 348
+        },
+        {
+          "name": "nag_text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 347
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_embeds",
+          "type": "WANVIDEOTEXTEMBEDS",
+          "links": [
+            350
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-wanvideowrapper",
+        "ver": "1.2.4",
+        "Node name for S&R": "WanVideoApplyNAG"
+      },
+      "widgets_values": [
+        20,
+        2.5,
+        0.3
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 172,
+      "type": "WanVideoClipVisionEncode",
+      "pos": [
+        1957.283447265625,
+        -2487.11376953125
+      ],
+      "size": [
+        280.9771423339844,
+        262
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 288
+        },
+        {
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 352
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "negative_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_CLIPEMBEDS",
+          "links": [
+            287
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "58104b620f6b52de2fc516ade9f31383b0e7eca9",
+        "Node name for S&R": "WanVideoClipVisionEncode"
+      },
+      "widgets_values": [
+        1,
+        1,
+        "center",
+        "average",
+        true,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": 184,
+      "type": "WanVideoEncode",
+      "pos": [
+        2299.264404296875,
+        -2144.6591796875
+      ],
+      "size": [
+        270,
+        242
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 311
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 314
+        },
+        {
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "links": [
+            310
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "f3614e6720744247f3211d60f7b9333f43572384",
+        "Node name for S&R": "WanVideoEncode"
+      },
+      "widgets_values": [
+        false,
+        272,
+        272,
+        144,
+        128,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 128,
+      "type": "WanVideoSampler",
+      "pos": [
+        2944.23876953125,
+        -2652.74853515625
+      ],
+      "size": [
+        315,
+        797.9375
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "WANVIDEOMODEL",
+          "link": 197
+        },
+        {
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "link": 198
+        },
+        {
+          "name": "text_embeds",
+          "shape": 7,
+          "type": "WANVIDEOTEXTEMBEDS",
+          "link": 350
+        },
+        {
+          "name": "samples",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "feta_args",
+          "shape": 7,
+          "type": "FETAARGS",
+          "link": null
+        },
+        {
+          "name": "context_options",
+          "shape": 7,
+          "type": "WANVIDCONTEXT",
+          "link": 321
+        },
+        {
+          "name": "cache_args",
+          "shape": 7,
+          "type": "CACHEARGS",
+          "link": null
+        },
+        {
+          "name": "flowedit_args",
+          "shape": 7,
+          "type": "FLOWEDITARGS",
+          "link": null
+        },
+        {
+          "name": "slg_args",
+          "shape": 7,
+          "type": "SLGARGS",
+          "link": null
+        },
+        {
+          "name": "loop_args",
+          "shape": 7,
+          "type": "LOOPARGS",
+          "link": null
+        },
+        {
+          "name": "experimental_args",
+          "shape": 7,
+          "type": "EXPERIMENTALARGS",
+          "link": null
+        },
+        {
+          "name": "sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "unianimate_poses",
+          "shape": 7,
+          "type": "UNIANIMATE_POSE",
+          "link": null
+        },
+        {
+          "name": "fantasytalking_embeds",
+          "shape": 7,
+          "type": "FANTASYTALKING_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "uni3c_embeds",
+          "shape": 7,
+          "type": "UNI3C_EMBEDS",
+          "link": 308
+        },
+        {
+          "name": "multitalk_embeds",
+          "shape": 7,
+          "type": "MULTITALK_EMBEDS",
+          "link": 320
+        },
+        {
+          "name": "freeinit_args",
+          "shape": 7,
+          "type": "FREEINITARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            194
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "c3ee35f3ece76e38099dc516182d69b406e16772",
+        "Node name for S&R": "WanVideoSampler"
+      },
+      "widgets_values": [
+        5,
+        1.0000000000000002,
+        5.000000000000001,
+        6,
+        "fixed",
+        true,
+        "dpm++_sde",
+        0,
+        1,
+        false,
+        "comfy",
+        ""
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 175,
+      "type": "INTConstant",
+      "pos": [
+        1590.62353515625,
+        -2286.689697265625
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            295,
+            319
+          ]
+        }
+      ],
+      "title": "Frames",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "f7eb33abc80a2aded1b46dff0dd14d07856a7d50",
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        130
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 132,
+      "type": "WanVideoImageToVideoEncode",
+      "pos": [
+        1941.163818359375,
+        -2923.40673828125
+      ],
+      "size": [
+        308.2320251464844,
+        390
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae",
+          "type": "WANVAE",
+          "link": 199
+        },
+        {
+          "name": "clip_embeds",
+          "shape": 7,
+          "type": "WANVIDIMAGE_CLIPEMBEDS",
+          "link": 287
+        },
+        {
+          "name": "start_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 353
+        },
+        {
+          "name": "end_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "control_embeds",
+          "shape": 7,
+          "type": "WANVIDIMAGE_EMBEDS",
+          "link": null
+        },
+        {
+          "name": "temporal_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "extra_latents",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "add_cond_latents",
+          "shape": 7,
+          "type": "ADD_COND_LATENTS",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 290
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 291
+        },
+        {
+          "name": "num_frames",
+          "type": "INT",
+          "widget": {
+            "name": "num_frames"
+          },
+          "link": 295
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image_embeds",
+          "type": "WANVIDIMAGE_EMBEDS",
+          "links": [
+            198
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-WanVideoWrapper",
+        "ver": "058286fc0f3b0651a2f6b68309df3f06e8332cc0",
+        "Node name for S&R": "WanVideoImageToVideoEncode"
+      },
+      "widgets_values": [
+        512,
+        720,
+        81,
+        0,
+        1,
+        1,
+        true,
+        false,
+        false
+      ]
+    }
+  ],
+  "links": [
+    [
+      193,
+      129,
+      0,
+      130,
+      0,
+      "WANVAE"
+    ],
+    [
+      194,
+      128,
+      0,
+      130,
+      1,
+      "LATENT"
+    ],
+    [
+      197,
+      122,
+      0,
+      128,
+      0,
+      "WANVIDEOMODEL"
+    ],
+    [
+      198,
+      132,
+      0,
+      128,
+      1,
+      "WANVIDIMAGE_EMBEDS"
+    ],
+    [
+      199,
+      129,
+      0,
+      132,
+      0,
+      "WANVAE"
+    ],
+    [
+      201,
+      134,
+      0,
+      122,
+      1,
+      "BLOCKSWAPARGS"
+    ],
+    [
+      256,
+      138,
+      0,
+      122,
+      2,
+      "WANVIDLORA"
+    ],
+    [
+      270,
+      120,
+      0,
+      122,
+      6,
+      "MULTITALKMODEL"
+    ],
+    [
+      283,
+      133,
+      0,
+      171,
+      0,
+      "IMAGE"
+    ],
+    [
+      287,
+      172,
+      0,
+      132,
+      1,
+      "WANVIDIMAGE_CLIPEMBEDS"
+    ],
+    [
+      288,
+      173,
+      0,
+      172,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      290,
+      171,
+      1,
+      132,
+      8,
+      "INT"
+    ],
+    [
+      291,
+      171,
+      2,
+      132,
+      9,
+      "INT"
+    ],
+    [
+      295,
+      175,
+      0,
+      132,
+      10,
+      "INT"
+    ],
+    [
+      299,
+      177,
+      0,
+      122,
+      0,
+      "WANCOMPILEARGS"
+    ],
+    [
+      308,
+      182,
+      0,
+      128,
+      14,
+      "UNI3C_EMBEDS"
+    ],
+    [
+      309,
+      183,
+      0,
+      182,
+      0,
+      "WANVIDEOCONTROLNET"
+    ],
+    [
+      310,
+      184,
+      0,
+      182,
+      1,
+      "LATENT"
+    ],
+    [
+      311,
+      129,
+      0,
+      184,
+      0,
+      "WANVAE"
+    ],
+    [
+      314,
+      186,
+      0,
+      184,
+      1,
+      "IMAGE"
+    ],
+    [
+      317,
+      137,
+      0,
+      187,
+      0,
+      "WAV2VECMODEL"
+    ],
+    [
+      319,
+      175,
+      0,
+      187,
+      6,
+      "INT"
+    ],
+    [
+      320,
+      187,
+      0,
+      128,
+      15,
+      "MULTITALK_EMBEDS"
+    ],
+    [
+      321,
+      189,
+      0,
+      128,
+      5,
+      "WANVIDCONTEXT"
+    ],
+    [
+      326,
+      192,
+      0,
+      120,
+      0,
+      "COMBO"
+    ],
+    [
+      327,
+      191,
+      0,
+      122,
+      7,
+      "COMBO"
+    ],
+    [
+      328,
+      125,
+      0,
+      187,
+      1,
+      "AUDIO"
+    ],
+    [
+      332,
+      194,
+      0,
+      183,
+      1,
+      "COMBO"
+    ],
+    [
+      334,
+      195,
+      0,
+      173,
+      0,
+      "COMBO"
+    ],
+    [
+      337,
+      198,
+      0,
+      199,
+      0,
+      "VIDEO"
+    ],
+    [
+      338,
+      130,
+      0,
+      198,
+      0,
+      "IMAGE"
+    ],
+    [
+      339,
+      130,
+      0,
+      197,
+      0,
+      "IMAGE"
+    ],
+    [
+      340,
+      200,
+      0,
+      138,
+      2,
+      "COMBO"
+    ],
+    [
+      341,
+      202,
+      0,
+      129,
+      0,
+      "COMBO"
+    ],
+    [
+      343,
+      204,
+      0,
+      136,
+      0,
+      "COMBO"
+    ],
+    [
+      344,
+      205,
+      0,
+      171,
+      2,
+      "INT"
+    ],
+    [
+      345,
+      206,
+      0,
+      171,
+      3,
+      "INT"
+    ],
+    [
+      346,
+      207,
+      0,
+      187,
+      7,
+      "FLOAT"
+    ],
+    [
+      347,
+      210,
+      0,
+      208,
+      1,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      348,
+      209,
+      0,
+      208,
+      0,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      349,
+      136,
+      0,
+      209,
+      0,
+      "WANTEXTENCODER"
+    ],
+    [
+      350,
+      208,
+      0,
+      128,
+      2,
+      "WANVIDEOTEXTEMBEDS"
+    ],
+    [
+      351,
+      136,
+      0,
+      210,
+      0,
+      "WANTEXTENCODER"
+    ],
+    [
+      352,
+      171,
+      0,
+      172,
+      1,
+      "IMAGE"
+    ],
+    [
+      353,
+      171,
+      0,
+      132,
+      2,
+      "IMAGE"
+    ],
+    [
+      354,
+      171,
+      0,
+      186,
+      0,
+      "IMAGE"
+    ],
+    [
+      355,
+      125,
+      0,
+      198,
+      1,
+      "AUDIO"
+    ],
+    [
+      356,
+      125,
+      0,
+      197,
+      1,
+      "AUDIO"
+    ],
+    [
+      357,
+      207,
+      0,
+      198,
+      2,
+      "FLOAT"
+    ],
+    [
+      358,
+      207,
+      0,
+      197,
+      4,
+      "FLOAT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 3,
+      "title": "Save MP4 & ProRes",
+      "bounding": [
+        3326.1962890625,
+        -2825.229736328125,
+        1035.9608154296875,
+        1052.7838134765625
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Loaders",
+      "bounding": [
+        541.1879272460938,
+        -2917.08740234375,
+        557.8689575195312,
+        1284.32861328125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Downloaders",
+      "bounding": [
+        -455.81591796875,
+        -2897.583740234375,
+        905.2992553710938,
+        1001.69580078125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Prompt and settings",
+      "bounding": [
+        1195.4302978515625,
+        -2913.53955078125,
+        641.560791015625,
+        1175.2667236328125
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Camera lock",
+      "bounding": [
+        2266.180908203125,
+        -2656.2958984375,
+        639.917236328125,
+        763.6365966796875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "Sampler, Steps, Shift",
+      "bounding": [
+        2934.23876953125,
+        -2726.3486328125,
+        335,
+        881.5374755859375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.31384283767210563,
+      "offset": [
+        510.01120745194055,
+        3487.73757704316
+      ]
+    },
+    "frontendVersion": "1.24.1",
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          3351.90283203125,
+          -2497.6494140625
+        ],
+        "linkIds": [
+          355,
+          356
+        ]
+      },
+      {
+        "id": 2,
+        "pos": [
+          3466.580810546875,
+          -2497.490478515625
+        ],
+        "linkIds": [
+          357,
+          358
+        ]
+      }
+    ],
+    "node_versions": {
+      "ComfyUI-KJNodes": "f9118e0bbb39347ea7becb84ec03e397dfb4f644",
+      "comfyui-videohelpersuite": "a7ce59e381934733bfae03b1be029756d6ce936d"
+    },
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "linkExtensions": [
+      {
+        "id": 355,
+        "parentId": 1
+      },
+      {
+        "id": 356,
+        "parentId": 1
+      },
+      {
+        "id": 357,
+        "parentId": 2
+      },
+      {
+        "id": 358,
+        "parentId": 2
+      }
+    ]
+  },
+  "version": 0.4
+}

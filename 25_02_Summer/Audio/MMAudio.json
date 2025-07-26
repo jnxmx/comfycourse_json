@@ -1,0 +1,758 @@
+{
+  "id": "b429ec49-96ef-4a5a-a78b-06d5e4e1eb36",
+  "revision": 0,
+  "last_node_id": 112,
+  "last_link_id": 188,
+  "nodes": [
+    {
+      "id": 107,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        869.97216796875,
+        -146.53982543945312
+      ],
+      "size": [
+        606.8970947265625,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            184
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "custom",
+        "https://huggingface.co/Kijai/MMAudio_safetensors/blob/main/mmaudio_vae_44k_fp32.safetensors",
+        "mmaudio"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 108,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        868.5899047851562,
+        2.7889404296875
+      ],
+      "size": [
+        606.7720336914062,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            185
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "custom",
+        "https://huggingface.co/Kijai/MMAudio_safetensors/blob/main/mmaudio_synchformer_fp32.safetensors",
+        "mmaudio"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 109,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        871.8587646484375,
+        150.93177795410156
+      ],
+      "size": [
+        601.5150146484375,
+        107.05888366699219
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            186
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "custom",
+        "https://huggingface.co/Kijai/MMAudio_safetensors/blob/main/apple_DFN5B-CLIP-ViT-H-14-384_fp32.safetensors",
+        "mmaudio"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 111,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        866.4793701171875,
+        -301.10772705078125
+      ],
+      "size": [
+        608.5142822265625,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            187
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "custom",
+        "https://huggingface.co/Kijai/MMAudio_safetensors/blob/main/mmaudio_large_44k_v2_fp32.safetensors",
+        "mmaudio"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 102,
+      "type": "MMAudioFeatureUtilsLoader",
+      "pos": [
+        1577.2188720703125,
+        -68.85494232177734
+      ],
+      "size": [
+        290.484375,
+        154
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bigvgan_vocoder_model",
+          "shape": 7,
+          "type": "VOCODER_MODEL",
+          "link": null
+        },
+        {
+          "name": "vae_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_model"
+          },
+          "link": 184
+        },
+        {
+          "name": "synchformer_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "synchformer_model"
+          },
+          "link": 185
+        },
+        {
+          "name": "clip_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_model"
+          },
+          "link": 186
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mmaudio_featureutils",
+          "type": "MMAUDIO_FEATUREUTILS",
+          "links": [
+            166
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MMAudioFeatureUtilsLoader",
+        "cnr_id": "comfyui-mmaudio",
+        "ver": "61f03a65a62dfeeb4687787104809f0e8028073a"
+      },
+      "widgets_values": [
+        "mmaudio_vae_44k_fp16.safetensors",
+        "mmaudio_synchformer_fp16.safetensors",
+        "apple_DFN5B-CLIP-ViT-H-14-384_fp16.safetensors",
+        "44k",
+        "fp32"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 85,
+      "type": "MMAudioModelLoader",
+      "pos": [
+        1586.725830078125,
+        -204.53720092773438
+      ],
+      "size": [
+        281.78094482421875,
+        84.60792541503906
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mmaudio_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "mmaudio_model"
+          },
+          "link": 187
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mmaudio_model",
+          "type": "MMAUDIO_MODEL",
+          "slot_index": 0,
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MMAudioModelLoader",
+        "cnr_id": "comfyui-mmaudio",
+        "ver": "61f03a65a62dfeeb4687787104809f0e8028073a"
+      },
+      "widgets_values": [
+        "mmaudio_large_44k_v2_fp32.safetensors",
+        "fp32"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 105,
+      "type": "VHS_VideoInfo",
+      "pos": [
+        2489.638427734375,
+        226.95648193359375
+      ],
+      "size": [
+        262,
+        206
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 172
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "slot_index": 5,
+          "links": [
+            176
+          ]
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "slot_index": 6,
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "slot_index": 7,
+          "links": [
+            175
+          ]
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_VideoInfo"
+      },
+      "widgets_values": {}
+    },
+    {
+      "id": 97,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2808.3857421875,
+        -144.90589904785156
+      ],
+      "size": [
+        648.7454223632812,
+        334
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 161
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 171
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "MMaudio",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": false,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "MMaudio_00001-audio.mp4",
+            "subfolder": "",
+            "type": "temp",
+            "format": "video/h264-mp4",
+            "frame_rate": 16,
+            "workflow": "MMaudio_00001.png",
+            "fullpath": "/workspace/ComfyUI/temp/MMaudio_00001-audio.mp4"
+          },
+          "muted": false
+        }
+      }
+    },
+    {
+      "id": 112,
+      "type": "SaveAudio",
+      "pos": [
+        2817.89990234375,
+        -302.4093322753906
+      ],
+      "size": [
+        634.0681762695312,
+        112
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 188
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44"
+      },
+      "widgets_values": [
+        "audio/ComfyUI"
+      ]
+    },
+    {
+      "id": 92,
+      "type": "MMAudioSampler",
+      "pos": [
+        2041.6947021484375,
+        -273.8208923339844
+      ],
+      "size": [
+        411.29339599609375,
+        354
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mmaudio_model",
+          "type": "MMAUDIO_MODEL",
+          "link": 152
+        },
+        {
+          "name": "feature_utils",
+          "type": "MMAUDIO_FEATUREUTILS",
+          "link": 166
+        },
+        {
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 170
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": 175
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            171,
+            188
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MMAudioSampler",
+        "cnr_id": "comfyui-mmaudio",
+        "ver": "61f03a65a62dfeeb4687787104809f0e8028073a"
+      },
+      "widgets_values": [
+        3,
+        25,
+        4.5,
+        7,
+        "fixed",
+        "character making dog barking sounds",
+        "",
+        false,
+        true
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 91,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        2027.3226318359375,
+        159.1518096923828
+      ],
+      "size": [
+        417.6617736816406,
+        553.0932006835938
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            161,
+            170
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "slot_index": 3,
+          "links": [
+            172
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_LoadVideo"
+      },
+      "widgets_values": {
+        "video": "WanVideo2_1_multitalk_00002.mp4",
+        "force_rate": 0,
+        "custom_width": 0,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "None",
+        "choose video to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "force_rate": 0,
+            "filename": "WanVideo2_1_multitalk_00002.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "select_every_nth": 1
+          },
+          "muted": false
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      152,
+      85,
+      0,
+      92,
+      0,
+      "MMAUDIO_MODEL"
+    ],
+    [
+      161,
+      91,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      102,
+      0,
+      92,
+      1,
+      "MMAUDIO_FEATUREUTILS"
+    ],
+    [
+      170,
+      91,
+      0,
+      92,
+      2,
+      "IMAGE"
+    ],
+    [
+      171,
+      92,
+      0,
+      97,
+      1,
+      "AUDIO"
+    ],
+    [
+      172,
+      91,
+      3,
+      105,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      175,
+      105,
+      7,
+      92,
+      3,
+      "FLOAT"
+    ],
+    [
+      176,
+      105,
+      5,
+      97,
+      4,
+      "FLOAT"
+    ],
+    [
+      184,
+      107,
+      0,
+      102,
+      1,
+      "COMBO"
+    ],
+    [
+      185,
+      108,
+      0,
+      102,
+      2,
+      "COMBO"
+    ],
+    [
+      186,
+      109,
+      0,
+      102,
+      3,
+      "COMBO"
+    ],
+    [
+      187,
+      111,
+      0,
+      85,
+      0,
+      "COMBO"
+    ],
+    [
+      188,
+      92,
+      0,
+      112,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.35049389948139237,
+      "offset": [
+        77.04542896966996,
+        498.674208900647
+      ]
+    },
+    "frontendVersion": "1.24.1",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
