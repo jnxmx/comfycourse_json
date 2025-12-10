@@ -1,0 +1,167 @@
+{
+  "id": "531c78b0-01cb-4728-941c-704932a53e3a",
+  "revision": 0,
+  "last_node_id": 23,
+  "last_link_id": 26,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "AudioSeparation",
+      "pos": [
+        30.873724144416652,
+        429.0803422765215
+      ],
+      "size": [
+        315,
+        166
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Bass",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Drums",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Other",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Vocals",
+          "type": "AUDIO",
+          "slot_index": 3,
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "audio-separation-nodes-comfyui",
+        "ver": "1.4.0",
+        "Node name for S&R": "AudioSeparation"
+      },
+      "widgets_values": [
+        "half_sine",
+        16,
+        0.1
+      ]
+    },
+    {
+      "id": 22,
+      "type": "SaveAudioMP3",
+      "pos": [
+        384.4774507515788,
+        428.9673239850768
+      ],
+      "size": [
+        295.937744140625,
+        136
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "LoadAudio",
+      "pos": [
+        54.302145931365104,
+        214.37084009260226
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "Record (online-voice-recorder.com) (6).mp3",
+        null,
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      23,
+      11,
+      3,
+      22,
+      0,
+      "AUDIO"
+    ],
+    [
+      25,
+      23,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9827652129922755,
+      "offset": [
+        413.3888709325588,
+        43.556981839912915
+      ]
+    },
+    "frontendVersion": "1.34.8",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

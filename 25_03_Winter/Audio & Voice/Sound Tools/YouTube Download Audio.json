@@ -1,0 +1,199 @@
+{
+  "id": "37e0b4b1-3475-49d6-a613-3e0890c9f558",
+  "revision": 0,
+  "last_node_id": 16,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 4,
+      "type": "PreviewAudio",
+      "pos": [
+        730.45849609375,
+        -2135.28173828125
+      ],
+      "size": [
+        262.0355224609375,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "YouTubeVideoDownloader",
+      "pos": [
+        728.3773193359375,
+        -2521.21533203125
+      ],
+      "size": [
+        245.26025390625,
+        174
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "audio_path",
+          "type": "STRING",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-MediaMixer",
+        "ver": "2bae7b5ea8fc52d8a4d668d62fed76265f4eec2c",
+        "Node name for S&R": "YouTubeVideoDownloader"
+      },
+      "widgets_values": [
+        "https://www.youtube.com/watch?v=Q2CPZw995dY",
+        "input/",
+        "720p",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 3,
+      "type": "VHS_LoadAudio",
+      "pos": [
+        723.7086181640625,
+        -2290.385009765625
+      ],
+      "size": [
+        261.8638610839844,
+        106.55718231201172
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_file",
+          "type": "STRING",
+          "widget": {
+            "name": "audio_file"
+          },
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            3,
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "a7ce59e381934733bfae03b1be029756d6ce936d",
+        "Node name for S&R": "VHS_LoadAudio"
+      },
+      "widgets_values": {
+        "audio_file": "input/",
+        "seek_seconds": 0,
+        "duration": 0
+      }
+    },
+    {
+      "id": 16,
+      "type": "SaveAudioMP3",
+      "pos": [
+        734.9857177734375,
+        -1995.8099365234375
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.44",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      1,
+      1,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ],
+    [
+      16,
+      3,
+      0,
+      16,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1918176537727456,
+      "offset": [
+        -462.50915531170506,
+        2638.5781428481637
+      ]
+    },
+    "frontendVersion": "1.24.1",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

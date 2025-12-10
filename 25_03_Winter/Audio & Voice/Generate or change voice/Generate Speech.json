@@ -1,0 +1,335 @@
+{
+  "id": "0d245766-c886-445d-9551-b52facd15701",
+  "revision": 0,
+  "last_node_id": 22,
+  "last_link_id": 48,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "PreviewAny",
+      "pos": [
+        -721.9139842584865,
+        2994.0698293355413
+      ],
+      "size": [
+        326.4358155986689,
+        559.7451355685635
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 48
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 14,
+      "type": "AudioAdjustVolume",
+      "pos": [
+        -280.18210191067675,
+        2550.329089669735
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "AudioAdjustVolume"
+      },
+      "widgets_values": [
+        5
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ChatterBoxOfficial23LangEngineNode",
+      "pos": [
+        -1149.8686781363328,
+        2287.2373638219988
+      ],
+      "size": [
+        355.4830078125,
+        250
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TTS_engine",
+          "type": "TTS_ENGINE",
+          "links": [
+            45
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "4.14.36",
+        "Node name for S&R": "ChatterBoxOfficial23LangEngineNode"
+      },
+      "widgets_values": [
+        "v2",
+        "Russian",
+        "auto",
+        1,
+        0.8,
+        0.5,
+        2,
+        0.05,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadAudio",
+      "pos": [
+        -1104.7216405432177,
+        2634.747647368725
+      ],
+      "size": [
+        274.080078125,
+        136
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "ComfyUI_00073_.mp3",
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "SaveAudioMP3",
+      "pos": [
+        -269.28463747334456,
+        2795.4564757035614
+      ],
+      "size": [
+        439.7000736052378,
+        242.62357701318706
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Note",
+      "pos": [
+        -689.4970974839314,
+        2321.7582226328104
+      ],
+      "size": [
+        140,
+        60
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́\nа́ е́ и́ о́ у́ ы́ э́ ю́ я́"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 21,
+      "type": "UnifiedTTSTextNode",
+      "pos": [
+        -706.9626937106185,
+        2441.120578736356
+      ],
+      "size": [
+        389.5678152944188,
+        465.6161869235211
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "TTS_engine",
+          "type": "TTS_ENGINE",
+          "link": 45
+        },
+        {
+          "name": "opt_narrator",
+          "shape": 7,
+          "type": "*",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            47
+          ]
+        },
+        {
+          "name": "generation_info",
+          "type": "STRING",
+          "links": [
+            48
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "tts_audio_suite",
+        "ver": "ee95cad1f155eceb1442723c7f351949b30361e3",
+        "Node name for S&R": "UnifiedTTSTextNode"
+      },
+      "widgets_values": [
+        "Што́бы испра́вить оши́бки в уда́рениях, мо́жно там, где они́ бы́ли непра́вильно вста́влены, вручну́ю замени́ть гла́сные на бу́квы с ударе́ниями.\nЛи́бо мо́жно автомати́чески расста́вить все́ ударе́ния предвари́тельно с по́мощью любо́й те́кстовоой моде́ли или чатбо́та.",
+        "none",
+        1552347952,
+        "fixed",
+        true,
+        400,
+        "auto",
+        100,
+        true,
+        0
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      42,
+      14,
+      0,
+      11,
+      0,
+      "AUDIO"
+    ],
+    [
+      44,
+      1,
+      0,
+      21,
+      1,
+      "AUDIO"
+    ],
+    [
+      45,
+      18,
+      0,
+      21,
+      0,
+      "TTS_ENGINE"
+    ],
+    [
+      47,
+      21,
+      0,
+      14,
+      0,
+      "AUDIO"
+    ],
+    [
+      48,
+      21,
+      1,
+      13,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6880054251475738,
+      "offset": [
+        2405.599712305924,
+        -1775.003513188357
+      ]
+    },
+    "frontendVersion": "1.34.8",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
