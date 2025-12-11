@@ -1525,101 +1525,6 @@
       ]
     },
     {
-      "id": 495,
-      "type": "69346c95-c979-4cc4-ae8d-e100a7bd1740",
-      "pos": [
-        1092.1825844365615,
-        385.5566842597043
-      ],
-      "size": [
-        229.4717108434479,
-        457.4717108434479
-      ],
-      "flags": {},
-      "order": 49,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 1138
-        },
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1175
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 1136
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 995
-        },
-        {
-          "name": "custom_sampler",
-          "type": "SAMPLER",
-          "link": 992
-        },
-        {
-          "label": "upscale_by",
-          "name": "value",
-          "type": "INT",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            993
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "value"
-          ],
-          [
-            "-1",
-            "seed"
-          ],
-          [
-            "-1",
-            "steps"
-          ],
-          [
-            "-1",
-            "scheduler"
-          ],
-          [
-            "-1",
-            "denoise"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.3.68"
-      },
-      "widgets_values": [
-        2,
-        382932401728659,
-        10,
-        "beta",
-        0.25
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
       "id": 269,
       "type": "CLIPTextEncode",
       "pos": [
@@ -2137,6 +2042,101 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 495,
+      "type": "69346c95-c979-4cc4-ae8d-e100a7bd1740",
+      "pos": [
+        1092.1825844365615,
+        385.5566842597043
+      ],
+      "size": [
+        229.4717108434479,
+        457.4717108434479
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1138
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1175
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 1136
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 995
+        },
+        {
+          "name": "custom_sampler",
+          "type": "SAMPLER",
+          "link": 992
+        },
+        {
+          "label": "upscale_by",
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            993
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "value"
+          ],
+          [
+            "-1",
+            "seed"
+          ],
+          [
+            "-1",
+            "steps"
+          ],
+          [
+            "-1",
+            "scheduler"
+          ],
+          [
+            "-1",
+            "denoise"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.68"
+      },
+      "widgets_values": [
+        2,
+        382932401728659,
+        10,
+        "beta",
+        0.25
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -3854,140 +3854,6 @@
             ]
           },
           {
-            "id": 494,
-            "type": "UltimateSDUpscaleCustomSample",
-            "pos": [
-              1765.3366437796763,
-              68.16700592542496
-            ],
-            "size": [
-              341.8580078125,
-              989.8580078125
-            ],
-            "flags": {
-              "collapsed": false
-            },
-            "order": 6,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "image",
-                "name": "image",
-                "type": "IMAGE",
-                "link": 974
-              },
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 979
-              },
-              {
-                "localized_name": "positive",
-                "name": "positive",
-                "type": "CONDITIONING",
-                "link": 980
-              },
-              {
-                "localized_name": "negative",
-                "name": "negative",
-                "type": "CONDITIONING",
-                "link": 981
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 982
-              },
-              {
-                "localized_name": "upscale_model",
-                "name": "upscale_model",
-                "shape": 7,
-                "type": "UPSCALE_MODEL",
-                "link": null
-              },
-              {
-                "localized_name": "custom_sampler",
-                "name": "custom_sampler",
-                "shape": 7,
-                "type": "SAMPLER",
-                "link": 983
-              },
-              {
-                "localized_name": "custom_sigmas",
-                "name": "custom_sigmas",
-                "shape": 7,
-                "type": "SIGMAS",
-                "link": 984
-              },
-              {
-                "localized_name": "seed",
-                "name": "seed",
-                "type": "INT",
-                "widget": {
-                  "name": "seed"
-                },
-                "link": 1001
-              },
-              {
-                "localized_name": "tile_width",
-                "name": "tile_width",
-                "type": "INT",
-                "widget": {
-                  "name": "tile_width"
-                },
-                "link": 999
-              },
-              {
-                "localized_name": "tile_height",
-                "name": "tile_height",
-                "type": "INT",
-                "widget": {
-                  "name": "tile_height"
-                },
-                "link": 1000
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  987
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui_ultimatesdupscale",
-              "ver": "1.6.0",
-              "Node name for S&R": "UltimateSDUpscaleCustomSample"
-            },
-            "widgets_values": [
-              1,
-              382932401728659,
-              "fixed",
-              20,
-              8,
-              "euler",
-              "simple",
-              0.2,
-              "Linear",
-              512,
-              512,
-              8,
-              32,
-              "None",
-              1,
-              64,
-              8,
-              16,
-              true,
-              false
-            ]
-          },
-          {
             "id": 405,
             "type": "BasicScheduler",
             "pos": [
@@ -4464,6 +4330,140 @@
             ],
             "color": "#323",
             "bgcolor": "#535"
+          },
+          {
+            "id": 494,
+            "type": "UltimateSDUpscaleCustomSample",
+            "pos": [
+              1765.3366437796763,
+              68.16700592542496
+            ],
+            "size": [
+              341.8580078125,
+              989.8580078125
+            ],
+            "flags": {
+              "collapsed": false
+            },
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "image",
+                "name": "image",
+                "type": "IMAGE",
+                "link": 974
+              },
+              {
+                "localized_name": "model",
+                "name": "model",
+                "type": "MODEL",
+                "link": 979
+              },
+              {
+                "localized_name": "positive",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 980
+              },
+              {
+                "localized_name": "negative",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 981
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 982
+              },
+              {
+                "localized_name": "upscale_model",
+                "name": "upscale_model",
+                "shape": 7,
+                "type": "UPSCALE_MODEL",
+                "link": null
+              },
+              {
+                "localized_name": "custom_sampler",
+                "name": "custom_sampler",
+                "shape": 7,
+                "type": "SAMPLER",
+                "link": 983
+              },
+              {
+                "localized_name": "custom_sigmas",
+                "name": "custom_sigmas",
+                "shape": 7,
+                "type": "SIGMAS",
+                "link": 984
+              },
+              {
+                "localized_name": "seed",
+                "name": "seed",
+                "type": "INT",
+                "widget": {
+                  "name": "seed"
+                },
+                "link": 1001
+              },
+              {
+                "localized_name": "tile_width",
+                "name": "tile_width",
+                "type": "INT",
+                "widget": {
+                  "name": "tile_width"
+                },
+                "link": 999
+              },
+              {
+                "localized_name": "tile_height",
+                "name": "tile_height",
+                "type": "INT",
+                "widget": {
+                  "name": "tile_height"
+                },
+                "link": 1000
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  987
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfyui_ultimatesdupscale",
+              "ver": "1.6.0",
+              "Node name for S&R": "UltimateSDUpscaleCustomSample"
+            },
+            "widgets_values": [
+              1,
+              382932401728659,
+              "fixed",
+              20,
+              1,
+              "euler",
+              "simple",
+              0.2,
+              "Linear",
+              512,
+              512,
+              8,
+              32,
+              "None",
+              1,
+              64,
+              8,
+              16,
+              true,
+              false
+            ]
           }
         ],
         "groups": [],
@@ -7751,10 +7751,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3542708679306255,
+      "scale": 0.7369346640988942,
       "offset": [
-        2487.7802505216096,
-        1018.0660150390642
+        482.6663572540931,
+        292.53138260673904
       ]
     },
     "frontendVersion": "1.34.8",
