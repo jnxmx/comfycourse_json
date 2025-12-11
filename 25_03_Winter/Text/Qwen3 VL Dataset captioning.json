@@ -1,0 +1,558 @@
+{
+  "id": "c9bcbdcf-3b2f-4fa5-965c-a7bb813661d0",
+  "revision": 0,
+  "last_node_id": 75,
+  "last_link_id": 92,
+  "nodes": [
+    {
+      "id": 59,
+      "type": "StringConcatenate",
+      "pos": [
+        -447.27865135653997,
+        166.12398194837039
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            78
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.68",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "input/",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 51,
+      "type": "LoadImageListFromDir //Inspire",
+      "pos": [
+        -448.33636674870274,
+        379.9386492569806
+      ],
+      "size": [
+        261.6568298339844,
+        194
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "directory",
+          "type": "STRING",
+          "link": 78,
+          "widget": {
+            "name": "directory"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            63,
+            64,
+            86
+          ],
+          "shape": 6
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": [],
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageListFromDir //Inspire",
+        "cnr_id": "comfyui-inspire-pack",
+        "ver": "1.20.0"
+      },
+      "widgets_values": [
+        "input/НАЗВАНИЕ-ПАПКИ",
+        0,
+        0,
+        false,
+        "Alphabetical (ASC)"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Note",
+      "pos": [
+        492.62968430415555,
+        170.47003394525362
+      ],
+      "size": [
+        274.14764404296875,
+        156.9140625
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Этот нод сохранит файлы картинок и текстов в директорию output"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 29,
+      "type": "StringConcatenate",
+      "pos": [
+        183.9793437156808,
+        47.551782039898036
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.40",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "Artwork by ИМЯ_ТОКЕНА",
+        "",
+        " "
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 32,
+      "type": "SaveImageKJ",
+      "pos": [
+        493.71816336481294,
+        378.67330295845574
+      ],
+      "size": [
+        282.751953125,
+        126
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 64
+        },
+        {
+          "name": "caption",
+          "shape": 7,
+          "type": "STRING",
+          "link": 92
+        },
+        {
+          "name": "output_folder",
+          "type": "STRING",
+          "widget": {
+            "name": "output_folder"
+          },
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filename",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "aeab1a7de581dc7253f48257392e8287bbeee4a9",
+        "Node name for S&R": "SaveImageKJ",
+        "aux_id": "kijai/ComfyUI-KJNodes"
+      },
+      "widgets_values": [
+        "dataset/image",
+        "input",
+        ".txt"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "PrimitiveString",
+      "pos": [
+        -448.0084466556426,
+        47.91773451414155
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            88,
+            89
+          ]
+        }
+      ],
+      "title": "Folder name",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.68",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "НАЗВАНИЕ_ПАПКИ"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 43,
+      "type": "Note",
+      "pos": [
+        -116.32198113730207,
+        431.49074700757075
+      ],
+      "size": [
+        253.48846435546875,
+        88
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "max_new_tokens регулирует длину описания."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 40,
+      "type": "Note",
+      "pos": [
+        161.84034187193808,
+        -210.70061595393616
+      ],
+      "size": [
+        224.59561418459748,
+        155.31063564994963
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Здесь в верхнем поле мы можем описать фразу с токеном общую для всех изображений, она будет добавлена в начало промпта."
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 57,
+      "type": "VHS_LoadImages",
+      "pos": [
+        -771.1821167762972,
+        39.815747165984696
+      ],
+      "size": [
+        270.2744140625,
+        194
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "8923bd836bdab8b7bbdf4ed104b7d045e70c66e2",
+        "Node name for S&R": "VHS_LoadImages"
+      },
+      "widgets_values": {
+        "directory": "Screenshots",
+        "image_load_cap": 1,
+        "skip_first_images": 0,
+        "select_every_nth": 1,
+        "choose folder to upload": "image",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "Screenshots",
+            "type": "input",
+            "format": "folder",
+            "image_load_cap": 1,
+            "skip_first_images": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 73,
+      "type": "QwenVL",
+      "pos": [
+        -123.36131603569,
+        56.72195003309652
+      ],
+      "size": [
+        287.2010841303536,
+        318.92581482516357
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_QwenVL",
+        "ver": "f29a4be1e412b4f7f84868319780d6e9d139706f",
+        "Node name for S&R": "QwenVL"
+      },
+      "widgets_values": [
+        "Generate a detailed, artistic text-to-image prompt based on the image. Combine the subject, their actions, the environment, lighting, and overall mood into a single, cohesive paragraph of about 2-3 sentences. Focus on key visual details.",
+        "Qwen3-VL-8B-Instruct",
+        "none",
+        true,
+        0.7,
+        512,
+        0,
+        "fixed",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      64,
+      51,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      78,
+      59,
+      0,
+      51,
+      0,
+      "STRING"
+    ],
+    [
+      86,
+      51,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      87,
+      73,
+      0,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      88,
+      74,
+      0,
+      59,
+      0,
+      "STRING"
+    ],
+    [
+      89,
+      74,
+      0,
+      32,
+      2,
+      "STRING"
+    ],
+    [
+      92,
+      29,
+      0,
+      32,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "1.",
+      "bounding": [
+        -781.1821167762972,
+        -33.78425283401512,
+        282.4130859375,
+        716.3237538739669
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "2.",
+      "bounding": [
+        -465.4013476302277,
+        -38.42467880028863,
+        1258.0547978544284,
+        629.4133676203526
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8463373478899159,
+      "offset": [
+        866.3173678082973,
+        130.5927831290775
+      ]
+    },
+    "frontendVersion": "1.34.8",
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          -148.97180804952674,
+          462.9236078594229
+        ],
+        "linkIds": [
+          89
+        ]
+      }
+    ],
+    "workspace_info": {
+      "id": "AJRGb9_QORD709cjq4MDg"
+    },
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "linkExtensions": [
+      {
+        "id": 89,
+        "parentId": 1
+      }
+    ]
+  },
+  "version": 0.4
+}
