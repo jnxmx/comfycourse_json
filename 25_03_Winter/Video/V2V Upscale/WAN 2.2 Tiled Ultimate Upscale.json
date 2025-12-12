@@ -5,41 +5,6 @@
   "last_link_id": 646,
   "nodes": [
     {
-      "id": 279,
-      "type": "Hugging Face Download Model",
-      "pos": [
-        1580.1988275054728,
-        -1357.4570059704245
-      ],
-      "size": [
-        277.09819623916644,
-        122
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "model name",
-          "type": "*",
-          "links": [
-            541
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "ComfyUI_HuggingFace_Downloader",
-        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
-        "Node name for S&R": "Hugging Face Download Model"
-      },
-      "widgets_values": [
-        "custom",
-        "https://huggingface.co/lightx2v/Wan2.2-Lightning/blob/main/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0/low_noise_model.safetensors",
-        "loras/Wan2.2-T2V-A14B-4steps-lora-rank64-Seko-V2.0"
-      ]
-    },
-    {
       "id": 278,
       "type": "WanVideoNAG",
       "pos": [
@@ -278,10 +243,10 @@
       ],
       "size": [
         247.2544921875,
-        98
+        106
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -833,12 +798,12 @@
       ],
       "size": [
         295.2369140625,
-        74
+        106
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -870,12 +835,12 @@
       ],
       "size": [
         295.2369140625,
-        74
+        106
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -907,12 +872,12 @@
       ],
       "size": [
         280.38656385666843,
-        98
+        106
       ],
       "flags": {
         "collapsed": false
       },
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1038,18 +1003,18 @@
       "inputs": [
         {
           "name": "image",
-          "shape": 7,
           "type": "IMAGE",
-          "link": null
+          "link": null,
+          "shape": 7
         },
         {
           "name": "video_path",
-          "shape": 7,
           "type": "STRING",
+          "link": 643,
+          "shape": 7,
           "widget": {
             "name": "video_path"
-          },
-          "link": 643
+          }
         }
       ],
       "outputs": [
@@ -1063,9 +1028,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "QwenVL",
         "cnr_id": "ComfyUI_QwenVL",
-        "ver": "29bc1de53742fa9b5046d25acf0f19d694bd6169",
-        "Node name for S&R": "QwenVL"
+        "ver": "29bc1de53742fa9b5046d25acf0f19d694bd6169"
       },
       "widgets_values": [
         "Extract the prompt that will reproduce the same video with generative video model. Prioritise description of style, technique, detailes, textures of materials and textures of image itself, cultural context that could guide video generation. Reply only the prompt, no other text.",
@@ -1091,7 +1056,7 @@
         190
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -1340,7 +1305,7 @@
         673.3707144693581
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1394,7 +1359,42 @@
       "widgets_values": [
         null,
         null,
-        true
+        null
+      ]
+    },
+    {
+      "id": 279,
+      "type": "Hugging Face Download Model",
+      "pos": [
+        1580.1988275054728,
+        -1357.4570059704245
+      ],
+      "size": [
+        277.09819623916644,
+        122
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model name",
+          "type": "*",
+          "links": [
+            541
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI_HuggingFace_Downloader",
+        "ver": "d996048592fd8767a2bd88c88294293353a0e99d",
+        "Node name for S&R": "Hugging Face Download Model"
+      },
+      "widgets_values": [
+        "loras",
+        "https://huggingface.co/Kijai/WanVideo_comfy/blob/main/LoRAs/Wan22-Lightning/Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16.safetensors",
+        ""
       ]
     }
   ],
@@ -1826,7 +1826,7 @@
               58
             ],
             "flags": {},
-            "order": 1,
+            "order": 0,
             "mode": 0,
             "inputs": [
               {
@@ -1867,7 +1867,7 @@
               82
             ],
             "flags": {},
-            "order": 2,
+            "order": 1,
             "mode": 0,
             "inputs": [
               {
@@ -1910,7 +1910,7 @@
               202.11110910276545
             ],
             "flags": {},
-            "order": 3,
+            "order": 2,
             "mode": 0,
             "inputs": [
               {
@@ -1957,7 +1957,7 @@
               78
             ],
             "flags": {},
-            "order": 0,
+            "order": 3,
             "mode": 0,
             "inputs": [
               {
@@ -3165,17 +3165,19 @@
             "type": "STRING"
           }
         ],
-        "extra": {}
+        "extra": {
+          "workflowRendererVersion": "LG"
+        }
       }
     ]
   },
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3910386068130655,
+      "scale": 0.9321274670683074,
       "offset": [
-        -218.625378751825,
-        2120.6422446905417
+        -1005.9927467133434,
+        1871.241032428173
       ]
     },
     "frontendVersion": "1.34.8",
@@ -3222,14 +3224,6 @@
           141,
           644
         ]
-      },
-      {
-        "id": 5,
-        "pos": [
-          1012.2557822874296,
-          193.90813441068207
-        ],
-        "linkIds": []
       },
       {
         "id": 6,
