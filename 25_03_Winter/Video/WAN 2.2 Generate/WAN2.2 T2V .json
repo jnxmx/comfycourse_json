@@ -363,64 +363,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 239,
-      "type": "ecf8ae59-dd3b-48e8-9404-e21ec72fb933",
-      "pos": [
-        987.9605195847615,
-        -1005.47089452818
-      ],
-      "size": [
-        210,
-        98
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "high",
-          "name": "model",
-          "type": "MODEL",
-          "link": 487
-        },
-        {
-          "label": "low",
-          "name": "model_1",
-          "type": "MODEL",
-          "link": 488
-        }
-      ],
-      "outputs": [
-        {
-          "label": "HIGH",
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            529
-          ]
-        },
-        {
-          "label": "LOW",
-          "name": "MODEL_1",
-          "type": "MODEL",
-          "links": [
-            530
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "244",
-            "value"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.3.73"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 225,
       "type": "a70da134-6fc9-49e8-a083-bb17d4585c28",
       "pos": [
@@ -429,7 +371,7 @@
       ],
       "size": [
         286.01835442728407,
-        561.6353243653473
+        517.6353243653473
       ],
       "flags": {},
       "order": 19,
@@ -572,6 +514,10 @@
           [
             "224",
             "cfg"
+          ],
+          [
+            "-1",
+            "vhslatentpreview"
           ]
         ],
         "cnr_id": "comfy-core",
@@ -1215,6 +1161,64 @@
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 239,
+      "type": "ecf8ae59-dd3b-48e8-9404-e21ec72fb933",
+      "pos": [
+        987.9605195847615,
+        -1005.47089452818
+      ],
+      "size": [
+        210,
+        98
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "high",
+          "name": "model",
+          "type": "MODEL",
+          "link": 487
+        },
+        {
+          "label": "low",
+          "name": "model_1",
+          "type": "MODEL",
+          "link": 488
+        }
+      ],
+      "outputs": [
+        {
+          "label": "HIGH",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            529
+          ]
+        },
+        {
+          "label": "LOW",
+          "name": "MODEL_1",
+          "type": "MODEL",
+          "links": [
+            530
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "244",
+            "value"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.3.73"
+      },
+      "widgets_values": []
     }
   ],
   "links": [
@@ -5176,7 +5180,7 @@
               "Node name for S&R": "PrimitiveBoolean"
             },
             "widgets_values": [
-              true
+              false
             ]
           }
         ],
