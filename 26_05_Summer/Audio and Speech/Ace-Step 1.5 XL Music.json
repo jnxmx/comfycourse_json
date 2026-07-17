@@ -1,0 +1,1188 @@
+{
+  "id": "88ac5dad-efd7-40bb-84fe-fbaefdee1fa9",
+  "revision": 0,
+  "last_node_id": 120,
+  "last_link_id": 277,
+  "nodes": [
+    {
+      "id": 104,
+      "type": "UNETLoader",
+      "pos": [
+        -190.00002515932607,
+        -880.000024323615
+      ],
+      "size": [
+        380,
+        108
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            273
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "UNETLoader",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "models": [
+          {
+            "name": "acestep_v1.5_xl_sft_bf16.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/diffusion_models/acestep_v1.5_xl_sft_bf16.safetensors",
+            "directory": "diffusion_models"
+          }
+        ]
+      },
+      "widgets_values": [
+        "acestep_v1.5_xl_sft_bf16.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "VAELoader",
+      "pos": [
+        -189.31641241893175,
+        -509.4990581671342
+      ],
+      "size": [
+        380,
+        108
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            262
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "VAELoader",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "models": [
+          {
+            "name": "ace_1.5_vae.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/vae/ace_1.5_vae.safetensors",
+            "directory": "vae"
+          }
+        ]
+      },
+      "widgets_values": [
+        "ace_1.5_vae.safetensors"
+      ]
+    },
+    {
+      "id": 99,
+      "type": "PrimitiveNode",
+      "pos": [
+        -140.000017634291,
+        -290.00004279215284
+      ],
+      "size": [
+        280,
+        90
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "widget": {
+            "name": "seconds"
+          },
+          "links": [
+            250,
+            251
+          ]
+        }
+      ],
+      "title": "Song Duration",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        180,
+        "fixed"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 98,
+      "type": "EmptyAceStep1.5LatentAudio",
+      "pos": [
+        280.6531790760078,
+        -14.298823313607727
+      ],
+      "size": [
+        271,
+        8
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seconds",
+          "type": "FLOAT",
+          "widget": {
+            "name": "seconds"
+          },
+          "link": 250
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            249
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "EmptyAceStep1.5LatentAudio",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        180,
+        1
+      ]
+    },
+    {
+      "id": 47,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        649.9999830520102,
+        -50.00005920943022
+      ],
+      "size": [
+        230,
+        50
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 255
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            119
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "ConditioningZeroOut",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 105,
+      "type": "DualCLIPLoader",
+      "pos": [
+        -190.00002515932607,
+        -720.0000352684666
+      ],
+      "size": [
+        380,
+        172
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            261
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "DualCLIPLoader",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "models": [
+          {
+            "name": "qwen_0.6b_ace15.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_0.6b_ace15.safetensors",
+            "directory": "text_encoders"
+          },
+          {
+            "name": "qwen_4b_ace15.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/ace_step_1.5_ComfyUI_files/resolve/main/split_files/text_encoders/qwen_4b_ace15.safetensors",
+            "directory": "text_encoders"
+          }
+        ]
+      },
+      "widgets_values": [
+        "qwen_0.6b_ace15.safetensors",
+        "qwen_4b_ace15.safetensors",
+        "ace",
+        "default"
+      ]
+    },
+    {
+      "id": 94,
+      "type": "TextEncodeAceStepAudio1.5",
+      "pos": [
+        273.74850178880104,
+        -879.4758550173628
+      ],
+      "size": [
+        613.859375,
+        831.484375
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 261
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 275
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": 251
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            254,
+            255
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "TextEncodeAceStepAudio1.5",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "Early 20th Century Russian Romance with a deeply nostalgic and romantic atmosphere, featuring lush string arrangements, melancholic piano melodies, and a pure, unadorned vocal style with a warm, analog recording timbre texture, set to a slow, deliberate pace with a timeless, flowing structure.",
+        "[Intro - melancholic - low energy]\n[Verse 1]\nМрачный воскресный день, убранный розами,\nПлакал, молился глазами я томными,\nСердцем взволнованным ждал тебя в комнатке:\n[Pre-Chorus]\nЖить одному без тебя невозможно мне,\nСлёзы дождём заливают уста мои.\nВетер рыдал панихидными песнями...\n[Chorus]\nМрачный воскресный день.\n[Instrumental]\n[Violin Solo]\n[Build]\n[Silence]\n[Spoken word - Whispered]\nМрачный воскресный день, ты торопись ко мне,\nСвечи в гробу, догореть вы успеете,\nБедное сердце не бьётся в груди моей,\nВеки, как свечи, ждут ласки руки твоей,\n[Verse]\nВ мёртвых глазах ты прочтёшь утешение,\nПрощаюсь с тобою, моё воскресение...\n[Chorus]\nМрачный воскресный день.\n[Outro]\n",
+        0,
+        "fixed",
+        80,
+        180,
+        "4",
+        "ru",
+        "E minor",
+        true,
+        2,
+        0.85,
+        1,
+        0,
+        0
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        939.2532675678035,
+        -539.6219047880318
+      ],
+      "size": [
+        330,
+        320
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 175
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 254
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 119
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 249
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 276
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            256
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "KSampler",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        50,
+        2,
+        "er_sde",
+        "linear_quadratic",
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        1413.11045007016,
+        -870.9208756801263
+      ],
+      "size": [
+        230,
+        72
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 256
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 262
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            277
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "VAEDecodeAudio",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 107,
+      "type": "SaveAudioMP3",
+      "pos": [
+        1399.058374015749,
+        -604.5877197853695
+      ],
+      "size": [
+        700,
+        208
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 277
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/shift6",
+        "V0"
+      ]
+    },
+    {
+      "id": 78,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        936.2960930010142,
+        -674.4830060574241
+      ],
+      "size": [
+        330,
+        80
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 274
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.11.1",
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        3
+      ]
+    },
+    {
+      "id": 110,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        770.7829168542733,
+        146.73174192926115
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            266
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "MASTER PROMPT:\n\nYou are an expert musician, musicologist, and elite prompt engineer specializing in the music foundation model ACE-Step 1.5 XL. Your task is to transform raw user input into a rich, multidimensional style caption optimized specifically for the \"Style Box\".\n\nCRITICAL PARAMETER RULES:\n1. This is strictly for the Style Box. Do NOT write lyrics. \n2. Do NOT include explicit numeric BPM values, numerical track lengths/seconds, or specific musical keys. These are separate system parameters in the UI. Instead, use rhythmic/speed descriptions (e.g., \"mid-tempo\", \"fast-paced\", \"driving\", \"laid-back\").\n\nINSTRUCTIONS FOR GENERATING THE CAPTION:\nTo maximize the highest marginal returns of the model, synthesize the user's input into a precise, descriptive natural sentence or string of tags leveraging these 9 dimensions:\n- Style/Genre & Era Reference (e.g., 80s synth-pop, vintage soul, modern trap)\n- Emotion/Atmosphere (e.g., melancholic, uplifting, euphoric, intimate)\n- Instruments & Vocal Characteristics (e.g., acoustic guitar, crisp 808s, breathy female vocal style, raspy tone)\n- Timbre Texture & Production Style (e.g., warm, punchy, airy, lo-fi, studio-polished, bedroom pop)\n- Speed/Rhythm & Structure Hints (e.g., groovy mid-tempo, driving pace, building intro, catchy chorus)\n\nCOMPOSITION PRINCIPLES:\n- Specific Beats Vague: Never say \"a sad song\". Say \"melancholic piano ballad with a warm, intimate texture.\"\n- Evolution for Conflicts: If the user requests conflicting styles (e.g., classical and metal), do not mix them simultaneously. Instead, structure them as a temporal evolution (e.g., \"Starts with soft classical strings, transitions into a noisy dynamic metal rock chorus, ending with a dark ambient fade-out\").\n\nTemplate:\n[Era/Style/Genre] with [Emotion/Atmosphere], featuring [Core Instruments & Vocal/Texture Characteristics] with a [Production Style/Timbre Texture], set to a [Speed/Rhythm] featuring a [Structure Hint].\n\nExamples:\n- 1990s grunge rock track with a dark and aggressive atmosphere, featuring raw distorted electric guitars, heavy live drums, and a raspy grunge vocal style with a warm, unpolished bedroom pop production style, driven by a fast-paced rhythm that builds dynamically into a massive chorus.\n- Modern trap song with a dark, euphoric vibe, featuring crisp 808 drums, sharp synth plucks, and airy, breathy vocal effects with a high-fidelity, studio-polished timbre texture, keeping a groovy, laid-back mid-tempo pace throughout.\n- Vintage soul piece with a nostalgic and intimate mood, featuring a warm electric bass, smooth brass section, and a polished live recording production style, moving at a slow tempo with a building intro that flows into a catchy chorus.\n- Experimental track showing style evolution: Starts with a quiet, cinematic lo-fi piano and soft vinyl crackle, middle transitions into a fast-paced, noisy dynamic electronic synthwave beat with punchy arpeggios, and ends with a dramatic, fading ambient drone soundscape.\n- Lo-fi hip hop track with a cozy, reflective mood, featuring a mellow felt piano, lazy acoustic guitar loops, and a warm, fuzzy timbral texture in a classic bedroom pop production style, following a driving but relaxed mid-tempo groove.\n\nUSER PROMPT:"
+      ]
+    },
+    {
+      "id": 111,
+      "type": "StringConcatenate",
+      "pos": [
+        765.9444949454767,
+        391.0650136684457
+      ],
+      "size": [
+        400,
+        220
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 266
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 267
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 112,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        304.60613791779815,
+        129.28357913350413
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "русский романс начала двадцатого века, записан аналоговыми инструментами традиционно без синтетической записи, натуральное звучание"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 113,
+      "type": "TextGenerate",
+      "pos": [
+        1269.7407997634969,
+        280.09954195291687
+      ],
+      "size": [
+        389.59375,
+        532
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 269
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 268
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_text",
+          "type": "STRING",
+          "links": [
+            270
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "TextGenerate"
+      },
+      "widgets_values": [
+        "",
+        256,
+        "on",
+        0.7,
+        64,
+        0.95,
+        0.05,
+        1.05,
+        0,
+        0,
+        false,
+        true
+      ]
+    },
+    {
+      "id": 114,
+      "type": "CLIPLoader",
+      "pos": [
+        1280.7897196935378,
+        102.0736964844076
+      ],
+      "size": [
+        397.9375,
+        140
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            269
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "gemma4_e4b_it_fp8_scaled.safetensors",
+        "stable_diffusion",
+        "default"
+      ]
+    },
+    {
+      "id": 115,
+      "type": "PreviewAny",
+      "pos": [
+        1745.3915418371137,
+        185.54533729797737
+      ],
+      "size": [
+        388.640625,
+        591.875
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 270
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 117,
+      "type": "APG",
+      "pos": [
+        951.0391193613442,
+        -898.2360995677767
+      ],
+      "size": [
+        292.234375,
+        172
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 273
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            274
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "APG"
+      },
+      "widgets_values": [
+        0.7,
+        2.5,
+        -0.75
+      ]
+    },
+    {
+      "id": 118,
+      "type": "SeedNode",
+      "pos": [
+        -134.5010616274459,
+        -148.56048837496985
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            275,
+            276
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "SeedNode"
+      },
+      "widgets_values": [
+        0,
+        "fixed"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 120,
+      "type": "MarkdownNote",
+      "pos": [
+        -1026.1974504264615,
+        -919.0808028944924
+      ],
+      "size": [
+        767.859375,
+        5884.5
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "#### About Lyrics: The Temporal Script\n\nIf Caption describes the music's \"overall portrait\"—style, atmosphere, timbre—then **Lyrics is the music's \"temporal script\"**, controlling how music unfolds over time.\n\nLyrics is not just lyric content. It carries:\n- The lyric text itself\n- **Structure tags** ([Verse], [Chorus], [Bridge]...)\n- **Vocal style hints** ([raspy vocal], [whispered]...)\n- **Instrumental sections** ([guitar solo], [drum break]...)\n- **Energy changes** ([building energy], [explosive drop]...)\n\n**Structure Tags are Key**\n\nStructure tags (Meta Tags) are the most powerful tool in Lyrics. They tell the model: \"What is this section, how should it be performed?\"\n\n**Common Structure Tags:**\n\n| Category | Tag | Description |\n|----------|-----|-------------|\n| **Basic Structure** | `[Intro]` | Opening, establish atmosphere |\n| | `[Verse]` / `[Verse 1]` | Verse, narrative progression |\n| | `[Pre-Chorus]` | Pre-chorus, build energy |\n| | `[Chorus]` | Chorus, emotional climax |\n| | `[Bridge]` | Bridge, transition or elevation |\n| | `[Outro]` | Ending, conclusion |\n| **Dynamic Sections** | `[Build]` | Energy gradually rising |\n| | `[Drop]` | Electronic music energy release |\n| | `[Breakdown]` | Reduced instrumentation, space |\n| **Instrumental Sections** | `[Instrumental]` | Pure instrumental, no vocals |\n| | `[Guitar Solo]` | Guitar solo |\n| | `[Piano Interlude]` | Piano interlude |\n| **Special Tags** | `[Fade Out]` | Fade out ending |\n| | `[Silence]` | Silence |\n\n**Combining Tags: Use Moderately**\n\nStructure tags can be combined with `-` for finer control:\n\n```\n[Chorus - anthemic]\nThis is the chorus lyrics\nDreams are burning\n\n[Bridge - whispered]\nWhisper those words softly\n```\n\nThis works better than writing `[Chorus]` alone—you're telling the model both what this section is (Chorus) and how to sing it (anthemic).\n\n**⚠️ Note: Don't stack too many tags.**\n\n```\n❌ Not recommended:\n[Chorus - anthemic - stacked harmonies - high energy - powerful - epic]\n\n✅ Recommended:\n[Chorus - anthemic]\n```\n\nStacking too many tags has two risks:\n1. The model might mistake tag content as lyrics to sing\n2. Too many instructions confuse the model, making effects worse\n\n**Principle**: Keep structure tags concise; put complex style descriptions in Caption.\n\n**⚠️ Key: Maintain Consistency Between Caption and Lyrics**\n\n**Models are not good at resolving conflicts.** If descriptions in Caption and Lyrics contradict, the model gets confused and output quality decreases.\n\n```\n❌ Conflict example:\nCaption: \"violin solo, classical, intimate chamber music\"\nLyrics: [Guitar Solo - electric - distorted]\n\n✅ Consistent example:\nCaption: \"violin solo, classical, intimate chamber music\"\nLyrics: [Violin Solo - expressive]\n```\n\n**Checklist:**\n- Instruments in Caption ↔ Instrumental section tags in Lyrics\n- Emotion in Caption ↔ Energy tags in Lyrics\n- Vocal description in Caption ↔ Vocal control tags in Lyrics\n\nThink of Caption as \"overall setting\" and Lyrics as \"shot script\"—they should tell the same story.\n\n**Vocal Control Tags:**\n\n| Tag | Effect |\n|-----|--------|\n| `[raspy vocal]` | Raspy, textured vocals |\n| `[whispered]` | Whispered |\n| `[falsetto]` | Falsetto |\n| `[powerful belting]` | Powerful, high-pitched singing |\n| `[spoken word]` | Rap/recitation |\n| `[harmonies]` | Layered harmonies |\n| `[call and response]` | Call and response |\n| `[ad-lib]` | Improvised embellishments |\n\n**Energy and Emotion Tags:**\n\n| Tag | Effect |\n|-----|--------|\n| `[high energy]` | High energy, passionate |\n| `[low energy]` | Low energy, restrained |\n| `[building energy]` | Increasing energy |\n| `[explosive]` | Explosive energy |\n| `[melancholic]` | Melancholic |\n| `[euphoric]` | Euphoric |\n| `[dreamy]` | Dreamy |\n| `[aggressive]` | Aggressive |\n\n**Lyric Text Writing Tips**\n\n**1. Control Syllable Count**\n\n**6-10 syllables per line** usually works best. The model aligns syllables to beats—if one line has 6 syllables and the next has 14, rhythm becomes strange.\n\n```\n❌ Bad example:\n我站在窗前看着外面的世界一切都在改变（18 syllables）\n你好（2 syllables）\n\n✅ Good example:\n我站在窗前（5 syllables）\n看着外面世界（6 syllables）\n一切都在改变（6 syllables）\n```\n\n**Tip**: Keep similar syllable counts for lines in the same position (e.g., first line of each verse) (±1-2 deviation).\n\n**2. Use Case to Control Intensity**\n\nUppercase indicates stronger vocal intensity:\n\n```\n[Verse]\nwalking through the empty streets (normal intensity)\n\n[Chorus]\nWE ARE THE CHAMPIONS! (high intensity, shouting)\n```\n\n**3. Use Parentheses for Background Vocals**\n\n```\n[Chorus]\nWe rise together (together)\nInto the light (into the light)\n```\n\nContent in parentheses is processed as background vocals or harmonies.\n\n**4. Extend Vowels**\n\nYou can extend sounds by repeating vowels:\n\n```\nFeeeling so aliiive\n```\n\nBut use cautiously—effects are unstable, sometimes ignored or mispronounced.\n\n**5. Clear Section Separation**\n\nSeparate each section with blank lines:\n\n```\n[Verse 1]\nFirst verse lyrics\nContinue first verse\n\n[Chorus]\nChorus lyrics\nChorus continues\n```\n\n**Avoiding \"AI-flavored\" Lyrics**\n\nThese characteristics make lyrics seem mechanical and lack human touch:\n\n| Red Flag 🚩 | Description |\n|-------------|-------------|\n| **Adjective stacking** | \"neon skies, electric hearts, endless dreams\"—filling a section with vague imagery |\n| **Rhyme chaos** | Inconsistent rhyme patterns, or forced rhymes causing semantic breaks |\n| **Blurred section boundaries** | Lyric content crosses structure tags, Verse content \"flows\" into Chorus |\n| **No breathing room** | Each line too long, can't sing in one breath |\n| **Mixed metaphors** | First verse uses water imagery, second suddenly becomes fire, third is flying—listeners can't anchor |\n\n**Metaphor discipline**: Stick to one core metaphor per song, exploring its multiple aspects. For example, choosing \"water\" as metaphor, you can explore: how love flows around obstacles like water, can be gentle rain or flood, reflects the other's image, can't be grasped but exists. One image, multiple facets—this gives lyrics cohesion.\n\n**Writing Instrumental Music**\n\nIf generating pure instrumental music without vocals:\n\n```\n[Instrumental]\n```\n\nOr use structure tags to describe instrumental development:\n\n```\n[Intro - ambient]\n\n[Main Theme - piano]\n\n[Climax - powerful]\n\n[Outro - fade out]\n```\n\n**Complete Example**\n\nAssuming Caption is: `female vocal, piano ballad, emotional, intimate atmosphere, strings, building to powerful chorus`\n\n```\n[Intro - piano]\n\n[Verse 1]\n月光洒在窗台上\n我听见你的呼吸\n城市在远处沉睡\n只有我们还醒着\n\n[Pre-Chorus]\n这一刻如此安静\n却藏着汹涌的心\n\n[Chorus - powerful]\n让我们燃烧吧\n像夜空中的烟火\n短暂却绚烂\n这就是我们的时刻\n\n[Verse 2]\n时间在指尖流过\n我们抓不住什么\n但至少此刻拥有\n彼此眼中的火焰\n\n[Bridge - whispered]\n如果明天一切消散\n至少我们曾经闪耀\n\n[Final Chorus]\n让我们燃烧吧\n像夜空中的烟火\n短暂却绚烂\nTHIS IS OUR MOMENT!\n\n[Outro - fade out]\n```\n\nNote: In this example, Lyrics tags (piano, powerful, whispered) are consistent with Caption descriptions (piano ballad, building to powerful chorus, intimate), with no conflicts.\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      119,
+      47,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      175,
+      78,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      249,
+      98,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      250,
+      99,
+      0,
+      98,
+      0,
+      "FLOAT"
+    ],
+    [
+      251,
+      99,
+      0,
+      94,
+      2,
+      "FLOAT"
+    ],
+    [
+      254,
+      94,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      255,
+      94,
+      0,
+      47,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      256,
+      3,
+      0,
+      18,
+      0,
+      "LATENT"
+    ],
+    [
+      261,
+      105,
+      0,
+      94,
+      0,
+      "CLIP"
+    ],
+    [
+      262,
+      106,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      266,
+      110,
+      0,
+      111,
+      0,
+      "STRING"
+    ],
+    [
+      267,
+      112,
+      0,
+      111,
+      1,
+      "STRING"
+    ],
+    [
+      268,
+      111,
+      0,
+      113,
+      4,
+      "STRING"
+    ],
+    [
+      269,
+      114,
+      0,
+      113,
+      0,
+      "CLIP"
+    ],
+    [
+      270,
+      113,
+      0,
+      115,
+      0,
+      "STRING"
+    ],
+    [
+      273,
+      104,
+      0,
+      117,
+      0,
+      "MODEL"
+    ],
+    [
+      274,
+      117,
+      0,
+      78,
+      0,
+      "MODEL"
+    ],
+    [
+      275,
+      118,
+      0,
+      94,
+      1,
+      "INT"
+    ],
+    [
+      276,
+      118,
+      0,
+      3,
+      4,
+      "INT"
+    ],
+    [
+      277,
+      18,
+      0,
+      107,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Model",
+      "bounding": [
+        -210,
+        -950,
+        447.22598026477124,
+        574.6629131689834
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Duration",
+      "bounding": [
+        -210,
+        -350,
+        450.29565242398064,
+        359.3112947990953
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Prompt",
+      "bounding": [
+        260,
+        -950,
+        640,
+        960
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Prompt Expander",
+      "bounding": [
+        282.742068943855,
+        32.07369648440747,
+        1861.2900978932576,
+        790.025845468509
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.48643187097337826,
+      "offset": [
+        692.5725897271333,
+        1294.4100123209957
+      ]
+    },
+    "frontendVersion": "1.45.21",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
