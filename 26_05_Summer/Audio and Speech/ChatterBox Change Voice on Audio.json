@@ -1,0 +1,243 @@
+{
+  "id": "d2b2d8bc-a1e5-4dd0-8d77-574e12d7ffa5",
+  "revision": 0,
+  "last_node_id": 12,
+  "last_link_id": 23,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "SaveAudioAdvanced",
+      "pos": [
+        1023.0667245456204,
+        893.6702268662818
+      ],
+      "size": [
+        353.203125,
+        253.34375
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0"
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "mp3",
+        "V0"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "RecordAudio",
+      "pos": [
+        87.5893270385559,
+        656.4819947364995
+      ],
+      "size": [
+        408.171875,
+        192.078125
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "RecordAudio"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 6,
+      "type": "LoadAudio",
+      "pos": [
+        96.60580474338722,
+        1104.2265820178623
+      ],
+      "size": [
+        407.65625,
+        152
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "ComfyUI_00001.mp3 [output]",
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 10,
+      "type": "FL_ChatterboxVC",
+      "pos": [
+        621.7360746001425,
+        895.9645850044724
+      ],
+      "size": [
+        366.328125,
+        184
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input_audio",
+          "type": "AUDIO",
+          "link": 23
+        },
+        {
+          "name": "target_voice",
+          "type": "AUDIO",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            15
+          ]
+        },
+        {
+          "name": "message",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fill-chatterbox",
+        "ver": "1.0.4",
+        "Node name for S&R": "FL_ChatterboxVC"
+      },
+      "widgets_values": [
+        1648405368,
+        "randomize",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadAudio",
+      "pos": [
+        95.82887898483102,
+        897.4365398788186
+      ],
+      "size": [
+        407.65625,
+        152
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.28.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "ComfyUI_00001.mp3 [output]",
+        null,
+        null
+      ]
+    }
+  ],
+  "links": [
+    [
+      15,
+      10,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      22,
+      6,
+      0,
+      10,
+      1,
+      "AUDIO"
+    ],
+    [
+      23,
+      12,
+      0,
+      10,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7555109477793138,
+      "offset": [
+        378.82402949261075,
+        -461.917950152025
+      ]
+    },
+    "frontendVersion": "1.45.21",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
